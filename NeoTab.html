@@ -809,7 +809,7 @@ function suggArrItemHTML(item) {
 }
 function suggAPIbadu(keyword) {
   // https://www.cnblogs.com/woider/p/5805248.html
-  var sugurl = "http://suggestion.baidu.com/su?wd=#content#&cb=window.baidu.sug";
+  var sugurl = "https://suggestion.baidu.com/su?wd=#content#&cb=window.baidu.sug";
   sugurl = sugurl.replace("#content#", keyword);
   window.baidu = {
     sug: function (value) {
@@ -825,7 +825,7 @@ function suggAPIbadu(keyword) {
   document.getElementsByTagName("head")[0].appendChild(script);
 }
 function suggAPIbing(keyword) {
-  var sugurl = "http://api.bing.com/qsonhs.aspx?type=cb&q=#content#&cb=window.bing.sug"
+  var sugurl = "https://api.bing.com/qsonhs.aspx?type=cb&q=#content#&cb=window.bing.sug"
   sugurl = sugurl.replace("#content#", keyword);
   window.bing = {
     sug: function (value) {
