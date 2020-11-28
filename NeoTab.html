@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NeoTab</title>
+  <meta name="description" content="Neo Tab -- a simple web navigation page which can be customized content as you wish">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- https://developers.google.cn/fonts/docs/getting_started -->
+  <!-- https://github.com/google/fonts/ -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+</head>
+<style>
+
+/*====GlobalCSSVar====*/
+:root {
+  --edit-show: none;
+  /*below value will change by theme settings*/
+  --fgcolor: #121212;
+  --bgcolor: white;
+  --veilcolor: #c0c0c080;
+  --dot-line:3px dotted #44444490;
+  --link: #2f4f4f;
+  /*below value will change by screen size*/
+  --input-height: 3rem;
+  --main-fsize: 2rem;
+  --fsize: 18px;
+  --sugg-fsize: 1.5rem;
+  --wrap-box: 50%;
+}
+body {
+  font-family: Sans-Serif;
+  color: var(--fgcolor);
+  background-color: var(--bgcolor);
+  //background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+/*====Layout====*/
+.flex { display: flex; }
+.flex flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.align-r { text-align: right; }
+.align-l { text-align: left; }
+.align-c { text-align: center; }
+.w100 { width: 100%; }
+.nav-top-box {
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: var(--fsize);
+  color: var(--fgcolor);
+  height: 1.2rem;
+  padding: 2px 4px;
+  //background-color: yellow;
+}
+.wrapper {
+  width: var(--wrap-box);
+  //background-color: darkcyan;
+}
+.container1 {
+  width: 80%;
+  margin: 1rem 10%;
+  background-color: transparent;
+}
+.container2 {
+  width: 90%;
+  margin: 2% 5%;
+  background-color: transparent;
+  //background-color: red;
+}
+#curtain {
+  width: 92%;
+  margin: 1rem 3%;
+  padding: 0 1%;
+  background-color: var(--veilcolor);
+}
+
+/*====Style Main Form====*/
+form input,form img,textarea,div>button {
+  color: var(--fgcolor);
+  background-color: transparent;
+  border:0;
+  font-family:monospace;
+  //font-weight: 800;
+  font-size: var(--main-fsize);
+}
+#restrainer {
+  border: var(--dot-line);
+  border-right: 0;
+  border-bottom: 0;
+  display: var(--edit-show);
+}
+#submit_anyway {
+  border: var(--dot-line);
+  border-bottom: 0;
+  display: var(--edit-show);
+}
+#long_text_editor {
+  outline: none;
+  overflow: hidden;
+  width: 100%;
+  border: var(--dot-line);
+  display: var(--edit-show);
+}
+#main_favicon {
+   flex-shrink: 0;
+   margin: 0;
+   padding: 0;
+   font-size: 110%;
+   width: var(--input-height);
+   height: var(--input-height);
+   //transition: background-position .2s ease 0s;
+   //background-color: red; 
+}
+#main_input {
+  border-bottom: var(--dot-line);
+  height: var(--input-height);
+  width: 100%;
+  padding: 0 5px;
+}
+#main_input:focus {
+  outline: none; /*remove blue frame when get kbd focus*/
+}
+#main_submit {
+  flex-shrink: 0;
+  border-bottom: var(--dot-line);
+  width: var(--input-height);
+  padding: 0;
+  //background-color: red;
+  cursor: pointer;
+  display: none;
+}
+#file_selector {
+  width:100%;
+  color:white;
+  background-color: #007800;
+}
+
+/*====Style Search Engine Button====*/
+.se-btn {
+  width:auto;
+  flex-wrap: wrap;
+  font-size: 120%;
+  background-color: transparent;
+  margin: 1px 2px;
+  padding: 2px 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+.se-btn:hover {
+  border-style: outset;
+  transition-duration: 0.4s;
+}
+
+/*====Style Links List====*/
+.lnk-box {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: auto;
+  width:100%;
+  //background-color: #600;
+}
+.lnk-title {
+  width:100%;
+  color: var(--fgcolor);
+  border: 0px;
+  border-style: solid;
+  border-left-width: 1rem;
+  font-weight: 800;
+  padding-left: 5px;
+  margin: 2px 4px 2px 0px;
+}
+.lnk-item {
+  color: var(--link);
+  background-color: var(--veilcolor);
+  margin: 2px 4px 2px 0px;
+  padding: 2px 4px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.lnk-item:hover {
+  transition-duration: 0.5s;
+  color: #00ff00;
+  background-color: #333333;
+  //text-decoration: underline;
+}
+#wf_layout{
+  display: flex;
+}
+#wf_layout_box {
+  //padding-bottom: 100%;
+}
+#wf_layout_grid {
+  margin: 0.2rem 0.1rem;
+  padding: 4px 8px;
+  background-color: #12121260;
+}
+
+/*====Style Other====*/
+#sentence {
+  font-family: Caveat,Serif;
+  font-size: 1.5rem;
+  color: var(--fgcolor);
+  margin-left: 38.2%;
+  background-color: transparent;
+}
+.suggestion {
+  font-family:monospace;
+  font-size: var(--sugg-fsize);
+  background-color: var(--veilcolor);
+  width: 50%;
+  position: fixed;
+  cursor: pointer;
+}
+#sugg_web {
+  color: #008800;
+}
+#sugg_hist{
+  left: 50%;
+  color: #888800;
+}
+.sugg-web, .sugg-hist {
+  background-color: var(--veilcolor);
+  border-radius: 8px;
+  margin: 2px 4px;
+  padding: 5px 15px;
+}
+.sugg-web:hover, .sugg-hist:hover, .sugg-match {
+  background-color: #5c5c5c;
+  color: black;
+}
+
+/*====Responsiveness====*/
+@media screen and (max-width: 800px) {
+:root {
+  --edit-show: none;
+  /*below value will change by theme settings*/
+  --fgcolor: black;
+  --bgcolor: white;
+  --veilcolor: #ffffff40;
+  --dot-line:3px dotted #44444490;
+  --link: #2f4f4f;
+  /*below value will change by screen size*/
+  --input-height: 3rem;
+  --main-fsize: 2rem;
+  --fsize: 18px;
+  --sugg-fsize: 1.5rem;
+  --wrap-box: 0%;
+}
+}
+</style>
+
+<body id='body'>
+  <div id='curtain'>
+  <!-- nav-top -->
+  <div id="nav_top" class="flex">
+    <div id="nav_top_l" class="nav-top-box align-c">nav-top-l</div>
+    <div id="nav_top_c" class="nav-top-box align-c">nav-top-c</div>
+    <div id="nav_top_r" class="nav-top-box align-c">nav-top-r</div>
+  </div>
+  <!-- config loader -->
+  <input type="file" id="file_selector" name="FILE" accept=".json" />
+  <!-- navigator search engine -->
+  <div id="nav_se" class="align-c container1"></div>
+      <div id="sugg_web"  class="suggestion">webs</div>
+      <div id="sugg_hist" class="suggestion">hist</div>
+  <!-- frame -->
+  <div class="flex">
+    <div class="wrapper"></div>
+    <div class="w100">
+      <div class="flex flex-col">
+        <button id="restrainer" class="w100">000</button>
+        <button id="submit_anyway" class="w100 close-right">🔍</button> </div>
+      <textarea id="long_text_editor" placeholder=""></textarea>
+      <form id="main_form" action="" method="GET" target="_blank" onsubmit="return doValidation();">
+        <div class="flex flex-col">
+          <img id="main_favicon" alt="" src="" />
+          <input id="main_input" name="query" type="text" autocomplete="off" spellcheck="false" tabindex="1" />
+          <input id="main_submit" type="submit" value="🔍" tabindex="-1" />
+        </div>
+         <div id="sentence"></div>
+      </form>
+    </div>
+    <div class="wrapper"></div>
+  </div>
+  <!-- navigator links -->
+  <div id="nav_lnk" class="container2"></div>
+  </div>
+</body>
+</html>
+<script>
+'use strict';
+
+/*====utility====*/
+function $(id) { return document.getElementById(id); }
+//function unique(arr) { return Array.from(new Set(arr)); }
+function goTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function recordHistory(q,url) {
+  usrConf.Saved.history.push({name:q,url:url});
+  //usrConf.Saved.history = unique(usrConf.Saved.history);
+  if (usrConf.Saved.history.length > usrConf.Miscellaneous.historyLimit) {
+    usrConf.Saved.history.shift();
+  }
+  saveCurrentConf();
+}
+function doValidation() {
+  //save hist arr there
+  let q = main_input.value;
+  if (q == "") {
+    return false;
+  }
+  let name = q;
+  let url = main_form.action+'?'+main_input.name+'='+q;
+  if (main_form.action.includes('%')) {
+    //this query can't be submit correct, so use js
+    // redirect to url and open in new tab //console.log(main_form.action); console.log(url);
+    url = main_form.action.replace("%", q);
+    let nt = window.open(url,'_blank');
+    nt.focus();
+    if (usrConf.Miscellaneous.recordHistory) {
+      recordHistory(q,url);
+    }
+    return false;
+  }
+  if (usrConf.Miscellaneous.recordHistory) {
+    recordHistory(q,url);
+  }
+  return true;
+}
+function changeRootStyle(key,val) {
+  const rootStyle = document.querySelector(":root").style;
+  rootStyle.setProperty(key, val);
+  //rootStyle.getPropertyValue('--color');
+  //rootStyle.removeProperty('--color');
+}
+let color_id  = 0;
+function colorDistribute(colorArray) {
+  let color = colorArray;
+  let color_len = color.length;
+  let ret = color[color_id];
+  color_id++;
+  if (color_id == color_len) {
+    color_id = 0;
+  }
+  return ret;
+}
+function themeDark() {
+  changeRootStyle('--fgcolor','#b0b0b0');
+  changeRootStyle('--bgcolor','black');
+  changeRootStyle('--veilcolor','#00000090');
+  changeRootStyle('--dot-line','3px dotted #ffffff70');
+  changeRootStyle('--link','#eed8ae');
+}
+function saveCurrentConf() {
+  localStorage.setItem('usrConf', JSON.stringify(usrConf));
+}
+
+/*====initial process====*/
+//localStorage.clear();
+let usrConf = localStorage.getItem("usrConf");
+if (usrConf === null) {
+  $('file_selector').style.display = 'block';
+  usrConf = {
+    "Links":{
+      "说明":[
+        {"name":"已载入内置默认选项，此页面仅供演示，请使用私人配置文件以达到最佳使用体验","url":""},
+        {"name":"有关配置和使用方法请点我","url":""}
+      ],
+      "說明":[
+        {"name":"已載入內置默認選項，此頁面僅供演示，請使用私人配置文件以達到最佳使用體驗","url":""},
+        {"name":"有關配置和使用方法請點我","url":""}
+      ],
+      "説明":[
+        {"name":"組み込みのデフォルトオプションが読み込まれました。このページはデモンストレーションのみを目的としています。エクスペリエンスを向上させるために、個人用設定ファイルを使用してください。","url":""},
+        {"name":"詳細な使用法についてはクリックしてください","url":""}
+      ],
+      "기술":[
+        {"name":"내장 기본 옵션이로드되었습니다.이 페이지는 데모 용입니다. 더 나은 환경을 위해 개인 구성 파일을 사용하십시오.","url":""},
+        {"name":"자세한 사용법을 보려면 저를 클릭하십시오","url": ""}
+      ],
+      "Description":[
+        {"name":"The built-in default options have been loaded. This page is for demonstration purposes only. Please use personal configuration file for better experience.","url":""},
+        {"name":"Please click me for detail usage","url":""}
+      ],
+      "La description":[
+        {"name": "Les options intégrées par défaut ont été chargées. Cette page est uniquement à des fins de démonstration. Veuillez utiliser le fichier de configuration personnel pour une meilleure expérience.", "url": ""},
+        {"name": "Cliquez sur moi pour plus de détails", "url": ""}
+      ],
+      "Beschreibung":[
+        {"name": "Die integrierten Standardoptionen wurden geladen. Diese Seite dient nur zu Demonstrationszwecken. Bitte verwenden Sie die persönliche Konfigurationsdatei, um eine bessere Erfahrung zu erzielen.", "url": ""},
+        {"name": "Bitte klicken Sie auf mich, um Einzelheiten zu erfahren", "url": ""}
+      ],
+     "Descrizione":[
+        {"name":"Le opzioni predefinite integrate sono state caricate. Questa pagina è solo a scopo dimostrativo. Utilizza un file di configurazione personale per una migliore esperienza.","url":""},
+        {"name":"Fare clic su di me per l'utilizzo dei dettagli","url": ""}
+      ],
+      "Περιγραφή":[
+        {"name": "Οι ενσωματωμένες προεπιλεγμένες επιλογές έχουν φορτωθεί. Αυτή η σελίδα προορίζεται μόνο για σκοπούς επίδειξης. Χρησιμοποιήστε προσωπικό αρχείο διαμόρφωσης για καλύτερη εμπειρία.","url":""},
+        {"name": "Παρακαλώ κάντε κλικ για λεπτομερή χρήση","url":""}
+      ]
+    },
+    "SearchEngine":{
+      "Normal":[
+        {"name":"baidu","action":"https://www.baidu.com/s?wd=%s","favicon":"https://www.baidu.com/favicon.ico"},
+        {"name":"sogou","action":"http://www.sogou.com/web?query=%s","favicon":"https://www.sogou.com/favicon.ico"},
+        {"name":"bing","action":"https://cn.bing.com/search?q=%s","favicon":"https://cn.bing.com/favicon.ico"}
+      ],
+      "Shopping":[
+        {"name":"amazon","action":"https://www.amazon.com/s?k=%s","favicon":"https://www.amazon.com/favicon.ico"}
+      ],
+      "Translation":[
+        {"name":"onelook","action":"https://www.onelook.com/?w=%s","favicon":"https://www.onelook.com/favicon.ico"}
+      ]
+    },
+    "Saved":{
+      "history":[{"name":"abc","url":""}],
+      "engine":"bing"
+    },
+    "Miscellaneous":{
+      "darkTheme": false,
+      "backgroundImage":"",
+      "suggestionVendor":"baidu",
+      "engineBtnTrigerOnclick":false,
+      "engineCompactLayout":true,
+      "linksWaterfallLayout":true,
+      "linksTitleColorBg":false,
+      "linksColumn":2,
+      "showEnglishSentence":true,
+      "showWeather":true,
+      "showTime":true,
+      "showDate":true,
+      "longTextLimit":40,
+      "historyLimit":5,
+      "recordHistory":true,
+      "colorList": ["#8d8d8d","#7fff00","#1e90ff"],
+      "colorList2": ["#343434","#cda0cd"]
+     }
+  };
+} else {
+  $('file_selector').style.display = 'none';
+  usrConf = JSON.parse(usrConf); //console.log(usrConf);
+}
+if (usrConf.Miscellaneous.darkTheme) {
+  themeDark();
+}
+
+/*====event listener====*/
+$('long_text_editor').addEventListener('keydown', function (e) {
+  if (e.which == 13 && e.ctrlKey ) { //ctrl+enter
+    main_input.value = long_text_editor.value;
+    main_form.submit();
+    return false;
+  }
+  return true;
+});
+$('long_text_editor').addEventListener('input', function (e) {
+  this.style.height = 'auto';
+  this.style.height = this.scrollHeight + "px";
+  restrainer.innerHTML = wcnt;
+  if (this.value.length <= usrConf.Miscellaneous.longTextLimit) {
+    restrainer.style.color = "green";
+    restrainer.disabled = false;
+  }
+  else {
+    restrainer.style.color = "red";
+    restrainer.disabled = true;
+  }
+  if (this.value=='') {
+    restrainer.click();
+  }
+});
+$('file_selector').addEventListener('change', function () {
+  let fr = new FileReader();
+  fr.readAsText(this.files[0]);
+  fr.onload = function () {
+    usrConf = JSON.parse(this.result);
+    localStorage.setItem("usrConf", this.result);
+    location.reload(); //console.log(usrConf); //console.log(JSON.stringify(SEngine));
+  }
+});
+function showLongTextEditor(yes) {
+  if (yes) {
+    changeRootStyle('--edit-show','block');
+    main_input.hidden = true;
+    long_text_editor.value = main_input.value;
+    long_text_editor.focus();
+    return;
+  }
+  changeRootStyle('--edit-show','none');
+  main_input.hidden = false;
+  main_input.value = long_text_editor.value;
+  main_input.focus();
+}
+$('restrainer').addEventListener('click', function () {
+  if (long_text_editor.value.length <= usrConf.Miscellaneous.longTextLimit) {
+    showLongTextEditor(false);
+  }
+});
+$('submit_anyway').addEventListener('click', function () {
+  main_input.value = long_text_editor.value;
+  main_form.submit();
+});
+$('main_input').addEventListener('focus', function () {
+  main_submit.style.display = "block";
+  goTop();
+});
+$('main_input').addEventListener('blur', function () {
+  $('sugg_web').innerHTML ='';
+  $('sugg_hist').innerHTML='';
+  setTimeout("main_submit.style.display='none';",200);
+});
+function suggItemSelect(direction,id,cls) {
+  let items = $(id).querySelectorAll('div');
+  if (direction==1) {
+    sugg_item_index++;
+    if (sugg_item_index == items.length) {
+      sugg_item_index = 0;
+    }
+  }else if(direction==-1) {
+    sugg_item_index--;
+    if (sugg_item_index < 0) {
+      sugg_item_index = items.length - 1;
+    }
+  }
+  main_input.value = items[sugg_item_index].innerHTML;
+  for (let i=0;i<items.length;i++) {
+    items[i].className = cls;
+  }
+  items[sugg_item_index].className = cls+" sugg-match";
+}
+let sugg_item_index = -1;
+$('main_input').addEventListener('keydown', function (e) {
+  let ev = e || event;
+  if (ev.key == "ArrowDown") {
+    suggItemSelect(1,'sugg_web','sugg-web');
+  }
+  if (ev.key == "ArrowUp") {
+    ev.preventDefault();
+    suggItemSelect(-1,'sugg_web','sugg-web');
+  }
+  if (ev.key == ']' && ev.ctrlKey){suggItemSelect( 1,'sugg_web','sugg-web');}
+  if (ev.key == '[' && ev.ctrlKey){suggItemSelect(-1,'sugg_web','sugg-web');}
+  if (ev.key == '}' && ev.ctrlKey){suggItemSelect( 1,'sugg_hist','sugg-hist');}
+  if (ev.key == '{' && ev.ctrlKey){suggItemSelect(-1,'sugg_hist','sugg-hist');}
+  if (e.which == 13 && e.ctrlKey) { //ctrl+enter
+    main_form.submit();
+  }
+});
+$('main_input').addEventListener('input', function () {
+  let content = this.value;
+  if (content.length > usrConf.Miscellaneous.longTextLimit) {
+    $('sugg_web').innerHTML ='';
+    $('sugg_hist').innerHTML='';
+    main_submit.style.display = 'none';
+    restrainer.innerHTML = content.length;
+    showLongTextEditor(true);
+    return;
+  }
+  if (content!='') {
+    setSuggPos();
+    sugg_item_index = -1;
+    let suggVendor = usrConf.Miscellaneous.suggestionVendor;
+    if     (suggVendor=='baidu'){suggAPIbadu(content); }
+    else if(suggVendor=='sogou'){suggAPIsogou(content);}
+    else if(suggVendor=='bing' ){suggAPIbing(content); }
+    else if(suggVendor=='360'  ){suggAPI360(content);  }
+    suggHistory(content);
+  } else {
+    $('sugg_web').innerHTML ='';
+    $('sugg_hist').innerHTML='';
+  }
+});
+$('sugg_web').innerHTML ='';
+$('sugg_hist').innerHTML='';
+function setSuggPos() {
+  let ileft   = $('main_input').offsetLeft;
+  let iwidth  = $('main_input').offsetWidth;
+  let itop    = $('main_input').offsetTop;
+  let iheight = $('main_input').offsetHeight;
+  $('sugg_web').style.left   = ileft+'px';
+  $('sugg_web').style.top    = (itop+iheight)+'px';
+  $('sugg_web').style.width  = (iwidth/2)+'px';
+  $('sugg_hist').style.width = (iwidth/2)+'px';
+  $('sugg_hist').style.top   = (itop+iheight)+'px';
+}
+function suggHistory(content) {
+  let hist = usrConf.Saved.history;
+  $('sugg_hist').innerHTML='';
+  for (let i=0;i<hist.length;i++) {
+    if (hist[i].name.includes(content)) {
+      $('sugg_hist').innerHTML +=
+        "<div class='sugg-hist' onclick='main_input.value=this.innerHTML;main_form.submit();'>"
+        +hist[i].name+"</div>";
+    }
+  }
+}
+if (usrConf.Miscellaneous.showDate) {
+  $('nav_top_l').innerHTML = widgetDate();
+}
+if (usrConf.Miscellaneous.showTime) {
+  $('nav_top_c').innerHTML = widgetTime();
+  let timerT = setInterval("$('nav_top_c').innerHTML = widgetTime();", 1000);
+}
+if (usrConf.Miscellaneous.showWeather) {
+  $('nav_top_r').innerHTML = widgetWeather();
+}
+$('nav_top_c').addEventListener('click', function () {
+  $('file_selector').style.display = $('file_selector').style.display == 'none' ?  'block' : 'none';
+});
+if (usrConf.Miscellaneous.showEnglishSentence) {
+  widgetSentence();
+}
+$('body').style.backgroundImage = "url("+usrConf.Miscellaneous.backgroundImage+")";
+if (document.body.clientWidth < 800) { // screen width is small
+  $('nav_top').className='flex flex-wrap';
+  //let tbx = $('nav_top').querySelectorAll('div');
+  //tbx[0].style.textAlign = "center";
+  //tbx[1].style.textAlign = "center";
+  //tbx[2].style.textAlign = "center";
+}
+
+/*====auto generate button&links by json data====*/
+createSearchEngineBtn();
+if (usrConf.Saved.engine != "") {
+  let last_engine = usrConf.Saved.engine;
+  let btns = nav_se.querySelectorAll('button');
+  for (let i=0;i<btns.length;i++) {
+    if (btns[i].innerHTML == last_engine) {
+       btns[i].click();
+    }
+  }
+}
+if (usrConf.Miscellaneous.linksWaterfallLayout) {
+  createLinksWFLayout();
+} else {
+  createLinksGridLayout();
+}
+function createSearchEngineBtn() {
+  let ses = usrConf.SearchEngine;
+  let compact = usrConf.Miscellaneous.engineCompactLayout;
+  color_id = 0;
+  for (let taxo in ses) {
+    let color = colorDistribute(usrConf.Miscellaneous.colorList);
+    for (let obj of ses[taxo]) {
+      let btn = document.createElement("button");
+      btn.setAttribute("class","se-btn");
+      btn.setAttribute("style","color:"+color+";border-color:"+color);
+      btn.innerHTML = obj.name;
+      btn.setAttribute("data-action",obj.action);
+      btn.setAttribute("data-favicon",obj.favicon);
+      btn.setAttribute("onclick","changeSEngine(this)");
+      nav_se.appendChild(btn);
+    }
+    if(!compact) {
+      nav_se.appendChild(document.createElement('br'));
+    }
+  }
+}
+function setEngineActiveStyle(name) {
+  let btns = nav_se.querySelectorAll('button');
+  for (let i=0;i<btns.length;i++) {
+    if (btns[i].innerHTML == name) {
+       btns[i].style.backgroundColor = btns[i].style.color;
+       btns[i].style.color = 'black';
+    } else {
+       btns[i].style.backgroundColor = 'transparent';
+       btns[i].style.color = btns[i].style.borderColor;
+    }
+  }
+}
+function changeSEngine(elem) {
+  let act    = elem.getAttribute('data-action');
+  let sp     = act.lastIndexOf('?');
+  let action = act.slice(0,sp);
+  let query  = act.slice(sp+1,-3);
+  //console.log(action);
+  //console.log(query);
+  main_form.action = action;
+  main_input.name  = query;
+  main_favicon.src = elem.getAttribute('data-favicon');
+  main_favicon.alt = elem.innerHTML;
+  usrConf.Saved.engine = elem.innerHTML;
+                    setEngineActiveStyle(elem.innerHTML);
+  saveCurrentConf(); //console.log(usrConf.Saved.engine);
+  if (!main_input.hidden) {
+    main_input.focus();
+  } else {
+    long_text_editor.focus();
+  }
+  if (main_input.value!==""
+    && usrConf.Miscellaneous.engineBtnTrigerOnclick) {
+    if (main_input.hidden) {
+      main_input.value = long_text_editor.value;
+    }
+    main_form.submit();
+  }
+}
+function createLinksDataArr() {
+  let Arr = [];
+  let lnk = usrConf.Links;
+  let colorTitle = usrConf.Miscellaneous.linksTitleColorBg;
+  let taxo_cnt = 0;
+  color_id = 0;
+  let void_box = document.createElement("div");
+  for (let taxo in lnk) {
+    let color = colorDistribute(usrConf.Miscellaneous.colorList2);
+    let box = document.createElement("div");
+    box.setAttribute("id", "lnk_title_"+taxo_cnt);
+    box.setAttribute("class", "lnk-box");
+    void_box.appendChild(box);
+    let bar = document.createElement("div")
+    if (colorTitle) {
+      bar.setAttribute("style", "background-color:"+color+";color:white;border:0px;");
+    } else {
+      bar.setAttribute("style", "border-color:"+color);
+    }
+    bar.setAttribute("class", "lnk-title w100");
+    bar.innerHTML= taxo;
+    box.appendChild(bar);
+    for (let obj of lnk[taxo]) {
+      let link = document.createElement("a");
+      link.innerHTML = obj.name;
+      link.setAttribute("href", obj.url);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("class", "lnk-item");
+      box.appendChild(link);
+    }
+    taxo_cnt++;
+    Arr.push(void_box.innerHTML); //console.log(void_box.innerHTML);
+    void_box.removeChild(box);
+  } //console.log(void_box);
+  return Arr;
+}
+function createLinksGridLayout() {
+  $('nav_lnk').innerHTML = createLinksDataArr().join('');
+  let el = nav_lnk.querySelectorAll('.lnk-box')
+  for (let i=0;i<el.length;i++) {
+      el[i].style.width = 100.0/usrConf.Miscellaneous.linksColumn+"%";
+  }
+}
+function createLinksWFLayout() {
+  let wf = document.createElement('div');
+  wf.setAttribute('id','wf_layout');
+  $('nav_lnk').appendChild(wf);
+  waterfallLayout(usrConf.Miscellaneous.linksColumn,createLinksDataArr());
+  window.addEventListener('resize', function () {
+      setTimeout( function () {
+          $('nav_lnk').innerHTML = '';
+          createLinksWFLayout();
+      }, 200);
+      setSuggPos();
+      //console.log(document.body.clientWidth);
+  });
+}
+function waterfallLayout(col,data) {
+  for (let i=0;i<col;i++) {
+    let col_box = document.createElement('div');
+    col_box.setAttribute('id','wf_layout_box');
+    col_box.setAttribute('style','width:'+100/col+"%;");
+    $('wf_layout').appendChild(col_box);
+  }
+  let box_list = document.querySelectorAll('#wf_layout>#wf_layout_box');
+  let arr = new Array(col).fill(0);
+  let len = box_list.length;
+  for (let i=0;i<data.length;i++) {
+    let elem = document.createElement('div');
+    elem.setAttribute('id','wf_layout_grid');
+    //elem.innerHTML = "<b>"+i+"</b>"+data[i];
+    elem.innerHTML = data[i];
+    let min = Math.min.apply(Math,arr);
+    let minId = arr.indexOf(min);
+    box_list[minId].appendChild(elem);
+    elem.style.height = elem.offsetHeight+"px";
+    arr[minId]+=elem.offsetHeight;
+  }
+}
+
+/*====widget====*/
+function widgetDate() {
+  const opt = {year:'numeric', month:'long', day:'numeric', weekday:'short'};
+  return new Date().toLocaleDateString('local',opt);
+}
+function widgetTime() {
+  const opt = { hour12:false };
+  return new Date().toLocaleTimeString('en-US',opt);
+}
+function widgetWeather() {
+  let co = usrConf.Miscellaneous.darkTheme ? "b0b0b0" : "121212";
+  let fs = $('nav_top_r').style.fontsize;
+  let h  = $('nav_top_r').offsetHeight;
+  let src = 'https://tianqiapi.com/api.php?style=tv&skin=sogou&align=center&color='+co+'&fontsize='+fs;
+  let htmlStr = '<iframe id="weather_mini" scrolling="no" width="100%" height="'+h+'" src="'+src+'" frameborder="0" ></iframe>'
+  return htmlStr
+}
+function widgetSentence() {
+  fetch('https://api.eatrice.top')
+   .then(response => response.json())
+   .then(data => {
+     $('sentence').innerHTML = data.Content;
+   }).catch(console.error)
+}
+
+/*====suggestion API====*/
+function suggArrItemHTML(item) {
+  return "<div class='sugg-web' onclick='main_input.value=this.innerHTML;main_form.submit();'>"+item+"</div>";
+}
+function suggAPIbadu(keyword) {
+  // https://www.cnblogs.com/woider/p/5805248.html
+  var sugurl = "http://suggestion.baidu.com/su?wd=#content#&cb=window.baidu.sug";
+  sugurl = sugurl.replace("#content#", keyword);
+  window.baidu = {
+    sug: function (value) {
+      $('sugg_web').innerHTML='';
+      let res = value.s
+      for (var i=0;i<res.length;i++) {
+        $('sugg_web').innerHTML += suggArrItemHTML(res[i]);
+      }
+    }
+  }
+  var script = document.createElement("script");
+  script.src = sugurl;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+function suggAPIbing(keyword) {
+  var sugurl = "http://api.bing.com/qsonhs.aspx?type=cb&q=#content#&cb=window.bing.sug"
+  sugurl = sugurl.replace("#content#", keyword);
+  window.bing = {
+    sug: function (value) {
+      $('sugg_web').innerHTML='';
+      let res = value.AS.Results[0].Suggests; //console.log(value.AS.Results[0].Suggests);
+      for (var i=0;i<res.length;i++) {
+        $('sugg_web').innerHTML += suggArrItemHTML(res[i].Txt);
+      }
+    }
+  }
+  var script = document.createElement("script");
+  script.src = sugurl;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+function suggAPI360(keyword) {
+  var sugurl = "https://sug.so.360.cn/suggest?encodein=utf-8&encodeout=utf-8&format=json&word=#content#&callback=window.so.sug"
+  sugurl = sugurl.replace("#content#", keyword);
+  window.so = {
+    sug: function (value) {
+      $('sugg_web').innerHTML='';
+      let res = value.result;
+      for (var i=0;i<res.length;i++) {
+        $('sugg_web').innerHTML += suggArrItemHTML(res[i].word);
+      }
+    }
+  }
+  var script = document.createElement("script");
+  script.src = sugurl;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+function suggAPIsogou(keyword) {
+  var sugurl = "https://www.sogou.com/suggnew/ajajjson?type=web&key=#content#"
+  sugurl = sugurl.replace("#content#", keyword);
+  window.sogou = {
+    sug: function (value) {
+      $('sugg_web').innerHTML='';
+      let res = value[1];
+      for (var i=0;i<res.length;i++) {
+        $('sugg_web').innerHTML += suggArrItemHTML(res[i]);
+      }
+    }
+  }
+  var script = document.createElement("script");
+  script.src = sugurl;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+//https://suggest.taobao.com/sug?code=utf-8&q=#content#&callback=window.taobao.sug
+//https://www.google.com/s?hl=zh-cn&sugexp=llsin&q=#content#
+
+/*====debug====*/
+function db_save() {
+  saveCurrentConf();
+  location.reload();
+}
+function db_printHistory() {
+  let histArr = usrConf.Saved.history;
+  let histStr = '';
+  for (let i=0;i<histArr.length;i++) {
+    histStr += i+". "+histArr[i].name+"'"+histArr[i].url+"'\n";
+  }
+  console.log(histStr);
+}
+function db_clearHistory() {
+  usrConf.Saved.history = [];
+  console.log(usrConf.Saved.history);
+  saveCurrentConf();
+}
+function db_boolSwitch(which) {
+  usrConf.Miscellaneous[which] = !usrConf.Miscellaneous[which];
+  db_save();
+  console.log(which+"="+usrConf.Miscellaneous[which]);
+}
+function db_themeSwitch() {
+  db_boolSwitch('darkTheme');
+}
+</script>
