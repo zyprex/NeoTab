@@ -66,7 +66,6 @@ body {
   width: 90%;
   margin: 2% 5%;
   background-color: transparent;
-  //background-color: red;
 }
 #curtain {
   width: 92%;
@@ -241,11 +240,21 @@ form input,form img,textarea,div>button {
   --dot-line:3px dotted #44444490;
   --link: #2f4f4f;
   /*below value will change by screen size*/
-  --input-height: 3rem;
-  --main-fsize: 2rem;
-  --fsize: 18px;
-  --sugg-fsize: 1.5rem;
+  --input-height: 2rem;
+  --main-fsize: 1rem;
+  --fsize: 15px;
+  --sugg-fsize: 1rem;
   --wrap-box: 0%;
+}
+.container1 {
+  width: 100%;
+  margin: 5px 0;
+  background-color: transparent;
+}
+.container2 {
+  width: 100%;
+  margin: 2% 0;
+  background-color: transparent;
 }
 }
 </style>
@@ -293,14 +302,12 @@ form input,form img,textarea,div>button {
 
 /*====utility====*/
 function $(id) { return document.getElementById(id); }
-//function unique(arr) { return Array.from(new Set(arr)); }
 function goTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 function recordHistory(q,url) {
   usrConf.Saved.history.push({name:q,url:url});
-  //usrConf.Saved.history = unique(usrConf.Saved.history);
   if (usrConf.Saved.history.length > usrConf.Miscellaneous.historyLimit) {
     usrConf.Saved.history.shift();
   }
@@ -363,15 +370,16 @@ function saveCurrentConf() {
 let usrConf = localStorage.getItem("usrConf");
 if (usrConf === null) {
   $('file_selector').style.display = 'block';
+  let hlnk = window.location.protocol+"//"+window.location.host+"/README.md"
   usrConf = {
     "Links":{
       "说明":[
         {"name":"已载入内置默认选项，此页面仅供演示，请使用私人配置文件以达到最佳使用体验","url":""},
-        {"name":"有关配置和使用方法请点我","url":""}
+        {"name":"有关配置和使用方法请点我","url": hlnk}
       ],
       "說明":[
         {"name":"已載入內置默認選項，此頁面僅供演示，請使用私人配置文件以達到最佳使用體驗","url":""},
-        {"name":"有關配置和使用方法請點我","url":""}
+        {"name":"有關配置和使用方法請點我","url": hlnk}
       ],
       "説明":[
         {"name":"組み込みのデフォルトオプションが読み込まれました。このページはデモンストレーションのみを目的としています。エクスペリエンスを向上させるために、個人用設定ファイルを使用してください。","url":""},
@@ -379,27 +387,27 @@ if (usrConf === null) {
       ],
       "기술":[
         {"name":"내장 기본 옵션이로드되었습니다.이 페이지는 데모 용입니다. 더 나은 환경을 위해 개인 구성 파일을 사용하십시오.","url":""},
-        {"name":"자세한 사용법을 보려면 저를 클릭하십시오","url": ""}
+        {"name":"자세한 사용법을 보려면 저를 클릭하십시오","url": hlnk}
       ],
       "Description":[
         {"name":"The built-in default options have been loaded. This page is for demonstration purposes only. Please use personal configuration file for better experience.","url":""},
-        {"name":"Please click me for detail usage","url":""}
+        {"name":"Please click me for detail usage","url": hlnk}
       ],
       "La description":[
         {"name": "Les options intégrées par défaut ont été chargées. Cette page est uniquement à des fins de démonstration. Veuillez utiliser le fichier de configuration personnel pour une meilleure expérience.", "url": ""},
-        {"name": "Cliquez sur moi pour plus de détails", "url": ""}
+        {"name": "Cliquez sur moi pour plus de détails", "url": hlnk}
       ],
       "Beschreibung":[
         {"name": "Die integrierten Standardoptionen wurden geladen. Diese Seite dient nur zu Demonstrationszwecken. Bitte verwenden Sie die persönliche Konfigurationsdatei, um eine bessere Erfahrung zu erzielen.", "url": ""},
-        {"name": "Bitte klicken Sie auf mich, um Einzelheiten zu erfahren", "url": ""}
+        {"name": "Bitte klicken Sie auf mich, um Einzelheiten zu erfahren", "url": hlnk}
       ],
      "Descrizione":[
         {"name":"Le opzioni predefinite integrate sono state caricate. Questa pagina è solo a scopo dimostrativo. Utilizza un file di configurazione personale per una migliore esperienza.","url":""},
-        {"name":"Fare clic su di me per l'utilizzo dei dettagli","url": ""}
+        {"name":"Fare clic su di me per l'utilizzo dei dettagli","url": hlnk}
       ],
       "Περιγραφή":[
         {"name": "Οι ενσωματωμένες προεπιλεγμένες επιλογές έχουν φορτωθεί. Αυτή η σελίδα προορίζεται μόνο για σκοπούς επίδειξης. Χρησιμοποιήστε προσωπικό αρχείο διαμόρφωσης για καλύτερη εμπειρία.","url":""},
-        {"name": "Παρακαλώ κάντε κλικ για λεπτομερή χρήση","url":""}
+        {"name": "Παρακαλώ κάντε κλικ για λεπτομερή χρήση","url": hlnk}
       ]
     },
     "SearchEngine":{
@@ -616,10 +624,7 @@ if (usrConf.Miscellaneous.showEnglishSentence) {
 $('body').style.backgroundImage = "url("+usrConf.Miscellaneous.backgroundImage+")";
 if (document.body.clientWidth < 800) { // screen width is small
   $('nav_top').className='flex flex-wrap';
-  //let tbx = $('nav_top').querySelectorAll('div');
-  //tbx[0].style.textAlign = "center";
-  //tbx[1].style.textAlign = "center";
-  //tbx[2].style.textAlign = "center";
+  //$('main_input').style.width = '100px';
 }
 
 /*====auto generate button&links by json data====*/
@@ -631,6 +636,7 @@ if (usrConf.Saved.engine != "") {
     if (btns[i].innerHTML == last_engine) {
        btns[i].click();
     }
+    setEngineActiveStyle(btns[i].innerHTML);
   }
 }
 if (usrConf.Miscellaneous.linksWaterfallLayout) {
@@ -676,15 +682,16 @@ function changeSEngine(elem) {
   let sp     = act.lastIndexOf('?');
   let action = act.slice(0,sp);
   let query  = act.slice(sp+1,-3);
-  //console.log(action);
-  //console.log(query);
+  //console.log(action+" "+query);
   main_form.action = action;
   main_input.name  = query;
   main_favicon.src = elem.getAttribute('data-favicon');
   main_favicon.alt = elem.innerHTML;
-  usrConf.Saved.engine = elem.innerHTML;
-                    setEngineActiveStyle(elem.innerHTML);
-  saveCurrentConf(); //console.log(usrConf.Saved.engine);
+  if (usrConf.Saved.engine != elem.innerHTML) {
+    usrConf.Saved.engine = elem.innerHTML;
+    setEngineActiveStyle(elem.innerHTML);
+    saveCurrentConf(); //console.log(usrConf.Saved.engine);
+  }
   if (!main_input.hidden) {
     main_input.focus();
   } else {
