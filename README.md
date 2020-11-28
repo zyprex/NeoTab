@@ -61,7 +61,7 @@ structure of configuration file
 | :---                  | :---    | :----   | :---------     |
 |darkTheme              | boolean | false   | apply dark color template |
 |suggestionVendor       | string  | "baidu" | web keyword suggestion provider, possible value: 'baidu', 'sogou', 'bing', '360' |
-|backgroundImage        | string  | ""      | url or local file url (file://...)[^1] |
+|backgroundImage        | string  | ""      | url or local file url (file://...). if you want to use local pictrue, save Webpage to local, for secure reason web browser <em>Not allowed to load local </em>.|
 |engineBtnTrigerOnclick | boolean | false   | submit result directly when you click engine button   |
 |engineCompactLayout    | boolean | true    | when 'false', each group engine will take up one line |
 |linksWaterfallLayout   | boolean | true    | use waterfall layout |
@@ -77,4 +77,3 @@ structure of configuration file
 |colorList              | strArr  | ["#8d8d8d","#7fff00","#1e90ff"], | color apply in search engine button |
 |colorList2             | strArr  | ["#343434","#cda0cd"]            | color apply in links group title    |
 
-[^1]: if you want to use local pictrue, save Webpage to local, for secure reason web browser <em>Not allowed to load local </em>.

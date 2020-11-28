@@ -459,7 +459,7 @@ $('long_text_editor').addEventListener('keydown', function (e) {
 $('long_text_editor').addEventListener('input', function (e) {
   this.style.height = 'auto';
   this.style.height = this.scrollHeight + "px";
-  restrainer.innerHTML = wcnt;
+  restrainer.innerHTML = this.value.length;
   if (this.value.length <= usrConf.Miscellaneous.longTextLimit) {
     restrainer.style.color = "green";
     restrainer.disabled = false;
