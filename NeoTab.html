@@ -589,10 +589,10 @@ function setSuggPos() {
   let itop    = $('main_input').offsetTop;
   let iheight = $('main_input').offsetHeight;
   $('sugg_web').style.left   = ileft+'px';
-  $('sugg_web').style.top    = (itop+iheight)+'px';
+  $('sugg_web').style.top    = (itop+iheight-window.scrollY)+'px';
   $('sugg_web').style.width  = (iwidth/2)+'px';
   $('sugg_hist').style.width = (iwidth/2)+'px';
-  $('sugg_hist').style.top   = (itop+iheight)+'px';
+  $('sugg_hist').style.top   = (itop+iheight-window.scrollY)+'px';
 }
 function suggHistory(content) {
   let hist = usrConf.Saved.history;
