@@ -281,7 +281,7 @@ form input,form img,textarea,div>button {
         <button id="restrainer" class="w100">000</button>
         <button id="submit_anyway" class="w100 close-right">🔍</button> </div>
       <textarea id="long_text_editor" placeholder=""></textarea>
-      <form id="main_form" action="" method="POST" target="_blank" onsubmit="return doValidation();">
+      <form id="main_form" action="" method="GET" target="_blank" onsubmit="return doValidation();">
         <div class="flex flex-col">
           <img id="main_favicon" alt="" src="" />
           <input id="main_input" name="query" type="text" autocomplete="off" spellcheck="false" tabindex="1" />
@@ -516,9 +516,7 @@ $('main_input').addEventListener('focus', function () {
   goTop();
 });
 $('main_input').addEventListener('blur', function () {
-  $('sugg_web').innerHTML ='';
-  $('sugg_hist').innerHTML='';
-  setTimeout("main_submit.style.display='none';",200);
+  setTimeout("$('sugg_web').innerHTML='';$('sugg_hist').innerHTML='';main_submit.style.display='none';",200);
 });
 function suggItemSelect(direction,id,cls) {
   let items = $(id).querySelectorAll('div');
