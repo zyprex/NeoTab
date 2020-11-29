@@ -618,7 +618,7 @@ function suggHistory(content) {
   for (let i=0;i<hist.length;i++) {
     if (hist[i].name.includes(content)) {
       $('sugg_hist').innerHTML +=
-        "<div class='sugg-hist' onclick='main_input.value=this.innerHTML;main_form.submit();'>"
+        "<div class='sugg-hist' onclick='pressSuggMenu(this);'>"
         +hist[i].name+"</div>";
     }
   }
