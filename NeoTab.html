@@ -978,7 +978,8 @@ function db_themeSwitch() {
 function db_prompt(hint,which) {
   let value = prompt(hint,usrConf.Miscellaneous[which]);
   if (value) {
-   if (Number(value) !== NaN) {
+   let num = Number(value);
+   if (hint === 'number') {
      usrConf.Miscellaneous[which] = Number(value);
    } else {
      usrConf.Miscellaneous[which] = value;
