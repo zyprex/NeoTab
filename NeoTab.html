@@ -979,9 +979,9 @@ function db_prompt(hint,which) {
   let value = prompt(hint,usrConf.Miscellaneous[which]);
   if (value) {
    let num = Number(value);
-   if (hint === 'number') {
+   if (hint == 'number') {
      usrConf.Miscellaneous[which] = Number(value);
-   } else {
+   } else if (hint == 'string') {
      usrConf.Miscellaneous[which] = value;
    }
    db_save();
