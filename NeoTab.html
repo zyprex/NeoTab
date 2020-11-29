@@ -313,8 +313,15 @@ function recordHistory(q,url) {
   }
   saveCurrentConf();
 }
+function hideSuggMenu() {
+  $('sugg_web').innerHTML='';
+  $('sugg_hist').innerHTML='';
+}
+hideSuggMenu();
+function mainSubmit() {
+  main_form.submit();
+}
 function doValidation() {
-  //save hist arr there
   let q = main_input.value;
   if (q == "") {
     return false;
@@ -335,7 +342,10 @@ function doValidation() {
   if (usrConf.Miscellaneous.recordHistory) {
     recordHistory(q,url);
   }
-  return true;
+  let nt = window.open(url,'_blank');
+  nt.focus();
+  return false;
+  //return true;
 }
 function changeRootStyle(key,val) {
   const rootStyle = document.querySelector(":root").style;
@@ -459,7 +469,7 @@ if (usrConf.Miscellaneous.darkTheme) {
 $('long_text_editor').addEventListener('keydown', function (e) {
   if (e.which == 13 && e.ctrlKey ) { //ctrl+enter
     main_input.value = long_text_editor.value;
-    main_form.submit();
+    mainSubmit();
     return false;
   }
   return true;
@@ -509,14 +519,14 @@ $('restrainer').addEventListener('click', function () {
 });
 $('submit_anyway').addEventListener('click', function () {
   main_input.value = long_text_editor.value;
-  main_form.submit();
+  mainSubmit();
 });
 $('main_input').addEventListener('focus', function () {
   main_submit.style.display = "block";
-  goTop();
+  //goTop();
 });
 $('main_input').addEventListener('blur', function () {
-  setTimeout("$('sugg_web').innerHTML='';$('sugg_hist').innerHTML='';main_submit.style.display='none';",200);
+  setTimeout("hideSuggMenu();main_submit.style.display='none';",200);
 });
 function suggItemSelect(direction,id,cls) {
   let items = $(id).querySelectorAll('div');
@@ -552,14 +562,13 @@ $('main_input').addEventListener('keydown', function (e) {
   if (ev.key == '}' && ev.ctrlKey){suggItemSelect( 1,'sugg_hist','sugg-hist');}
   if (ev.key == '{' && ev.ctrlKey){suggItemSelect(-1,'sugg_hist','sugg-hist');}
   if (e.which == 13 && e.ctrlKey) { //ctrl+enter
-    main_form.submit();
+    mainSubmit();
   }
 });
 $('main_input').addEventListener('input', function () {
   let content = this.value;
   if (content.length > usrConf.Miscellaneous.longTextLimit) {
-    $('sugg_web').innerHTML ='';
-    $('sugg_hist').innerHTML='';
+    hideSuggMenu();
     main_submit.style.display = 'none';
     restrainer.innerHTML = content.length;
     showLongTextEditor(true);
@@ -575,12 +584,9 @@ $('main_input').addEventListener('input', function () {
     else if(suggVendor=='360'  ){suggAPI360(content);  }
     suggHistory(content);
   } else {
-    $('sugg_web').innerHTML ='';
-    $('sugg_hist').innerHTML='';
+    hideSuggMenu();
   }
 });
-$('sugg_web').innerHTML ='';
-$('sugg_hist').innerHTML='';
 function setSuggPos() {
   let ileft   = $('main_input').offsetLeft;
   let iwidth  = $('main_input').offsetWidth;
@@ -598,7 +604,7 @@ function suggHistory(content) {
   for (let i=0;i<hist.length;i++) {
     if (hist[i].name.includes(content)) {
       $('sugg_hist').innerHTML +=
-        "<div class='sugg-hist' onclick='main_input.value=this.innerHTML;main_form.submit();'>"
+        "<div class='sugg-hist' onclick='main_input.value=this.innerHTML;mainSubmit();'>"
         +hist[i].name+"</div>";
     }
   }
@@ -632,9 +638,10 @@ if (usrConf.Saved.engine != "") {
   let btns = nav_se.querySelectorAll('button');
   for (let i=0;i<btns.length;i++) {
     if (btns[i].innerHTML == last_engine) {
-       btns[i].click();
+      btns[i].click();
+      setEngineActiveStyle(btns[i].innerHTML);
+      break;
     }
-    setEngineActiveStyle(btns[i].innerHTML);
   }
 }
 if (usrConf.Miscellaneous.linksWaterfallLayout) {
@@ -700,7 +707,7 @@ function changeSEngine(elem) {
     if (main_input.hidden) {
       main_input.value = long_text_editor.value;
     }
-    main_form.submit();
+    mainSubmit();
   }
 }
 function createLinksDataArr() {
@@ -810,7 +817,7 @@ function widgetSentence() {
 
 /*====suggestion API====*/
 function suggArrItemHTML(item) {
-  return "<div class='sugg-web' onclick='main_input.value=this.innerHTML;main_form.submit();'>"+item+"</div>";
+  return "<div class='sugg-web' onclick='main_input.value=this.innerHTML;mainSubmit();'>"+item+"</div>";
 }
 function suggAPIbadu(keyword) {
   // https://www.cnblogs.com/woider/p/5805248.html
