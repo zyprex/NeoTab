@@ -40,11 +40,9 @@ body {
 .flex { display: flex; }
 .flex flex-col { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
-.align-r { text-align: right; }
-.align-l { text-align: left; }
-.align-c { text-align: center; }
 .w100 { width: 100%; }
 .nav-top-box {
+  text-align: center;
   flex-wrap: wrap;
   width: 100%;
   font-size: var(--fsize);
@@ -58,6 +56,7 @@ body {
   //background-color: darkcyan;
 }
 .container1 {
+  text-align: center;
   width: 80%;
   margin: 1rem 10%;
   background-color: transparent;
@@ -228,7 +227,20 @@ form input,form img,textarea,div>button {
   background-color: #5c5c5c;
   color: black;
 }
-
+#quick_toggle {
+  line-height: 1.5rem;
+}
+.q-ti {
+  font-size: 14px;
+  padding: 2px 5px;
+  border-bottom: 3px solid #009900;
+}
+.q-to {
+  font-size: 14px;
+  font-family: Sans-Serif;
+  background-color: #009900;
+  border-bottom: 3px solid #009900;
+}
 /*====Responsiveness====*/
 @media screen and (max-width: 800px) {
 :root {
@@ -240,13 +252,14 @@ form input,form img,textarea,div>button {
   --dot-line:3px dotted #44444490;
   --link: #2f4f4f;
   /*below value will change by screen size*/
-  --input-height: 2rem;
-  --main-fsize: 1rem;
+  --input-height: 32px;
+  --main-fsize: 20px;
   --fsize: 15px;
   --sugg-fsize: 1rem;
   --wrap-box: 0%;
 }
 .container1 {
+  text-align: center;
   width: 100%;
   margin: 5px 0;
   background-color: transparent;
@@ -260,17 +273,18 @@ form input,form img,textarea,div>button {
 </style>
 
 <body id='body'>
+  <div id='quick_toggle'></div>
   <div id='curtain'>
   <!-- nav-top -->
   <div id="nav_top" class="flex">
-    <div id="nav_top_l" class="nav-top-box align-c">nav-top-l</div>
-    <div id="nav_top_c" class="nav-top-box align-c">nav-top-c</div>
-    <div id="nav_top_r" class="nav-top-box align-c">nav-top-r</div>
+    <div id="nav_top_l" onclick="" class="nav-top-box"></div>
+    <div id="nav_top_c" onclick="" class="nav-top-box"></div>
+    <div id="nav_top_r" onclick="" class="nav-top-box"></div>
   </div>
   <!-- config loader -->
   <input type="file" id="file_selector" name="FILE" accept=".json" />
   <!-- navigator search engine -->
-  <div id="nav_se" class="align-c container1"></div>
+  <div id="nav_se" class="container1"></div>
       <div id="sugg_web"  class="suggestion">webs</div>
       <div id="sugg_hist" class="suggestion">hist</div>
   <!-- frame -->
@@ -535,7 +549,7 @@ function suggItemSelect(direction,id,cls) {
     if (sugg_item_index == items.length) {
       sugg_item_index = 0;
     }
-  }else if(direction==-1) {
+  } else if (direction==-1) {
     sugg_item_index--;
     if (sugg_item_index < 0) {
       sugg_item_index = items.length - 1;
@@ -619,6 +633,46 @@ if (usrConf.Miscellaneous.showTime) {
 if (usrConf.Miscellaneous.showWeather) {
   $('nav_top_r').innerHTML = widgetWeather();
 }
+function genQuickBtn(str) {
+  let velem = document.createElement('button');
+  velem.innerHTML = str;
+  velem.setAttribute("class","q-to");
+  return velem;
+}
+function createQuickToggle() {
+  let mi = usrConf.Miscellaneous;
+  for (let i in mi) {
+    let elem = document.createElement('span');
+    elem.setAttribute("class","q-ti");
+    elem.innerHTML = i;
+    if (typeof(mi[i])=='boolean') {
+      let velem = genQuickBtn(mi[i]);
+      velem.setAttribute("onclick","db_boolSwitch('"+i+"')");
+      $('quick_toggle').appendChild(elem);
+      $('quick_toggle').appendChild(velem);
+    } else if (typeof(mi[i])=='number') {
+      let velem = genQuickBtn(mi[i]);
+      velem.setAttribute("onclick","db_prompt('number','"+i+"')");
+      $('quick_toggle').appendChild(elem);
+      $('quick_toggle').appendChild(velem);
+    } else if (typeof(mi[i])=='string') {
+      let velem = genQuickBtn(mi[i]);
+      velem.setAttribute("onclick","db_prompt('string','"+i+"')");
+      $('quick_toggle').appendChild(elem);
+      $('quick_toggle').appendChild(velem);
+    } else {
+      continue;
+    }
+  }
+  let elem = document.createElement('button');
+  elem.setAttribute('onclick','db_clearHistory()');
+  elem.setAttribute('style','font-size:1rem;color:white;background-color:#f03030;');
+  elem.innerHTML = 'clearHistory';
+  $('quick_toggle').appendChild(elem);
+  $('nav_top_l').removeEventListener('click',createQuickToggle);
+}
+$('nav_top_l').addEventListener('click', createQuickToggle);
+//$('nav_top_l').click();
 $('nav_top_c').addEventListener('click', function () {
   $('file_selector').style.display = $('file_selector').style.display == 'none' ?  'block' : 'none';
 });
@@ -816,8 +870,16 @@ function widgetSentence() {
 }
 
 /*====suggestion API====*/
+function pressSuggMenu(elem) {
+  main_input.value=elem.innerHTML;
+  if (navigator.userAgent.includes('Mobile')) {
+    main_input.focus();
+    return;
+  }
+  mainSubmit();
+}
 function suggArrItemHTML(item) {
-  return "<div class='sugg-web' onclick='main_input.value=this.innerHTML;mainSubmit();'>"+item+"</div>";
+  return "<div class='sugg-web' onclick='pressSuggMenu(this)'>"+item+"</div>";
 }
 function suggAPIbadu(keyword) {
   // https://www.cnblogs.com/woider/p/5805248.html
@@ -903,7 +965,7 @@ function db_printHistory() {
 function db_clearHistory() {
   usrConf.Saved.history = [];
   console.log(usrConf.Saved.history);
-  saveCurrentConf();
+  db_save();
 }
 function db_boolSwitch(which) {
   usrConf.Miscellaneous[which] = !usrConf.Miscellaneous[which];
@@ -912,5 +974,16 @@ function db_boolSwitch(which) {
 }
 function db_themeSwitch() {
   db_boolSwitch('darkTheme');
+}
+function db_prompt(hint,which) {
+  let value = prompt(hint,usrConf.Miscellaneous[which]);
+  if (value) {
+   if (Number(value) !== NaN) {
+     usrConf.Miscellaneous[which] = Number(value);
+   } else {
+     usrConf.Miscellaneous[which] = value;
+   }
+   db_save();
+  }
 }
 </script>
