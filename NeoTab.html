@@ -15,7 +15,7 @@
 :root {
   --edit-show: none;
   /*below value will change by theme settings*/
-  --fgcolor: #121212;
+  --fgcolor: black;
   --bgcolor: white;
   --veilcolor: #ffffff20;
   --dot-line:3px dotted #44444490;
@@ -62,24 +62,25 @@ body {
   text-align: center;
   width: 80%;
   margin: 1rem 10%;
-  background-color: transparent;
+  //padding: 5px;
+  //background-color: var(--veilcolor);
 }
 .container2 {
   width: 90%;
-  margin: 2% 5%;
-  background-color: transparent;
+  margin: 2rem 5%;
+  //background-color: var(--veilcolor);
 }
 #curtain {
   width: 92%;
-  margin: 1rem 3%;
-  padding: 0 1%;
+  margin: 1rem 4%;
+  padding: 0;
   background-color: var(--veilcolor);
 }
 
 /*====Style Main Form====*/
 form input,form img,textarea,div>button {
   color: var(--fgcolor);
-  background-color: transparent;
+  background-color: var(--veilcolor);
   border:0;
   font-family:monospace;
   //font-weight: 800;
@@ -156,9 +157,9 @@ form input,form img,textarea,div>button {
 .lnk-box {
   display: inline-flex;
   flex-wrap: wrap;
-  height: auto;
   width:100%;
-  //background-color: #600;
+  //height:100%;
+  //background-color: var(--veilcolor);
 }
 .lnk-title {
   width:100%;
@@ -194,7 +195,7 @@ form input,form img,textarea,div>button {
 #wf_layout_grid {
   margin: 0.2rem 0.1rem;
   padding: 4px 8px;
-  background-color: #12121260;
+  background-color: var(--veilcolor);
 }
 
 /*====Style Other====*/
@@ -221,7 +222,7 @@ form input,form img,textarea,div>button {
   color: #888800;
 }
 .sugg-web, .sugg-hist {
-  background-color: var(--veilcolor);
+  background-color: var(--bgcolor);
   border-radius: 8px;
   margin: 2px 4px;
   padding: 5px 15px;
@@ -269,7 +270,7 @@ form input,form img,textarea,div>button {
   --bgcolor: white;
   --veilcolor: #ffffff20;
   --dot-line:3px dotted #44444490;
-  --link: #2f4f4f;
+  --link: #000000;
   /*below value will change by screen size*/
   --input-height: 32px;
   --main-fsize: 20px;
@@ -483,7 +484,7 @@ if (usrConf.Miscellaneous.darkTheme) {
 $('long_text_editor').addEventListener('keydown', function (e) {
   if (e.which == 13 && e.ctrlKey ) { //ctrl+enter
     main_input.value = long_text_editor.value;
-    main_form.submit();
+    mainSubmit();
     return false;
   }
   return true;
@@ -533,7 +534,7 @@ $('restrainer').addEventListener('click', function () {
 });
 $('submit_anyway').addEventListener('click', function () {
   main_input.value = long_text_editor.value;
-  main_form.submit();
+  mainSubmit();
 });
 $('main_input').addEventListener('focus', function () {
   main_submit.style.display = "block";
@@ -576,7 +577,7 @@ $('main_input').addEventListener('keydown', function (e) {
   if (ev.key == '}' && ev.ctrlKey){suggItemSelect( 1,'sugg_hist','sugg-hist');}
   if (ev.key == '{' && ev.ctrlKey){suggItemSelect(-1,'sugg_hist','sugg-hist');}
   if (e.which == 13 && e.ctrlKey) { //ctrl+enter
-    main_form.submit();
+    mainSubmit();
   }
 });
 $('main_input').addEventListener('input', function () {
@@ -687,7 +688,9 @@ $('nav_top_c').addEventListener('click', function () {
 if (usrConf.Miscellaneous.showEnglishSentence) {
   widgetSentence();
 }
-$('body').style.backgroundImage = "url("+usrConf.Miscellaneous.backgroundImage+")";
+window.addEventListener('load', function () {
+  $('body').style.backgroundImage = "url("+usrConf.Miscellaneous.backgroundImage+")";
+});
 if (document.body.clientWidth < 800) { // screen width is small
   $('nav_top').className='flex flex-wrap';
   //$('main_input').style.width = '100px';
@@ -764,7 +767,7 @@ function changeSEngine(elem) {
     if (main_input.hidden) {
       main_input.value = long_text_editor.value;
     }
-    main_form.submit();
+    mainSubmit();
   }
 }
 function createLinksDataArr() {
@@ -857,7 +860,7 @@ function widgetTime() {
   return new Date().toLocaleTimeString('en-US',opt);
 }
 function widgetWeather() {
-  let co = usrConf.Miscellaneous.darkTheme ? "b0b0b0" : "121212";
+  let co = usrConf.Miscellaneous.darkTheme ? "FFFFFF" : "000000";
   let fs = $('nav_top_r').style.fontsize;
   let h  = $('nav_top_r').offsetHeight;
   let src = 'https://tianqiapi.com/api.php?style=tv&skin=sogou&align=center&color='+co+'&fontsize='+fs;
@@ -879,7 +882,7 @@ function pressSuggMenu(elem) {
     main_input.focus();
     return;
   }
-  main_form.submit();
+  mainSubmit();
 }
 function suggArrItemHTML(item) {
   return "<div class='sugg-web' onclick='pressSuggMenu(this)'>"+item+"</div>";
