@@ -169,7 +169,7 @@ form input,form img,textarea,div>button {
   border-left-width: 1rem;
   font-weight: 800;
   padding-left: 5px;
-  margin: 2px 4px 2px 0px;
+  margin: 2px;
 }
 .lnk-item {
   color: var(--link);
@@ -860,7 +860,7 @@ function widgetTime() {
   return new Date().toLocaleTimeString('en-US',opt);
 }
 function widgetWeather() {
-  let co = usrConf.Miscellaneous.darkTheme ? "FFFFFF" : "000000";
+  let co = usrConf.Miscellaneous.darkTheme ? "B0B0B0" : "000000";
   let fs = $('nav_top_r').style.fontsize;
   let h  = $('nav_top_r').offsetHeight;
   let src = 'https://tianqiapi.com/api.php?style=tv&skin=sogou&align=center&color='+co+'&fontsize='+fs;
