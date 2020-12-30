@@ -576,9 +576,9 @@ $('main_input').addEventListener('keydown', function (e) {
   if (ev.key == '[' && ev.ctrlKey){suggItemSelect(-1,'sugg_web','sugg-web');}
   if (ev.key == '}' && ev.ctrlKey){suggItemSelect( 1,'sugg_hist','sugg-hist');}
   if (ev.key == '{' && ev.ctrlKey){suggItemSelect(-1,'sugg_hist','sugg-hist');}
-  if (e.which == 13) { //enter
-    mainSubmit();
-  }
+  //if (e.which == 13) { //enter
+  //  mainSubmit();
+  //}
 });
 $('main_input').addEventListener('input', function () {
   let content = this.value;
