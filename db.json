@@ -1,0 +1,22 @@
+{
+  "L":{
+    "Nav":[
+      {"n":"AnywhereAnything","u":"http://lackar.com/aa/"},
+      {"n":"LMGTFY","u":"https://lmgtfy.app/"}
+    ]
+  },
+  "S":{
+    "Norm":[
+      {"n":"bing","s":"https://cn.bing.com/search?q=%s"},
+      {"n":"baidu","s":"https://www.baidu.com/s?wd=%s"}
+    ]
+  },
+  "M":{"hist":[],"seen":"baidu"},
+  "X":{
+    "darkUI":true,
+    "soloUI":false,
+    "sugVendor":"sogou",
+    "limHist":10,
+    "useHist":true
+  }
+}
