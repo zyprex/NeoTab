@@ -599,6 +599,10 @@ function feedL(k) {
 function trigL(k) {
   l.querySelectorAll("A").forEach(function(i){
     if (i.innerHTML==k) {
+      si_box.querySelector("A").href = i.href;
+      si.alt = i.innerHTML;
+      si.src = "";
+      console.log(si_box.querySelector("A"));
       i.click();
       return false;
     }
