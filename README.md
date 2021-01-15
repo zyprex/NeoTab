@@ -1,79 +1,81 @@
-# NeoTab
+# Neo-Tab
 
-structure of configuration file
+the essential example of configure file
 
 ```json
 {
-  "Links":{
-    "uncatagories1":[
-      {"name":"<b>example1</b>","url":"https://example.com/"},
-      {"name":"example2","url":"https://example.com/"},
-      {"name":"example3","url":"https://example.com/"},
-      {"name":"example4","url":"https://example.com/"},
-    ],
-    "uncatagories2":[
-      {"name":"example1","url":"https://example.com/"},
-      {"name":"example2","url":"https://example.com/"},
-      {"name":"example3","url":"https://example.com/"},
-      {"name":"example4","url":"https://example.com/"},
-    ],
-  },
-  "SearchEngine":{
-    "Normal":[
-      {"name":"baidu","action":"https://www.baidu.com/s?wd=%s","favicon":"https://www.baidu.com/favicon.ico"},
-      {"name":"sogou","action":"http://www.sogou.com/web?query=%s","favicon":"https://www.sogou.com/favicon.ico"},
-      {"name":"bing","action":"https://cn.bing.com/search?q=%s","favicon":"https://cn.bing.com/favicon.ico"}
-    ],
-    "Shopping":[
-      {"name":"amazon","action":"https://www.amazon.com/s?k=%s","favicon":"https://www.amazon.com/favicon.ico"}
-    ],
-    "Translation":[
-      {"name":"onelook","action":"https://www.onelook.com/?w=%s","favicon":"https://www.onelook.com/favicon.ico"}
+  "L":{
+    "Link":[
+      {"n":"RefSeek","u":"https://www.refseek.com/"}
     ]
   },
-  "Saved":{
-    "history":[{"name":"abc","url":""}],
-    "engine":"bing"
+  "S":{
+    "Dict":[
+      {"n":"onelook","s":"https://www.onelook.com/?w=%s"},
+      {"n":"iciba","s":"http://www.iciba.com/word?w=%s","i":"http://cdn.iciba.com/www/img/www/favicon.ico"}
+    ]
   },
-  "Miscellaneous":{
-    "darkTheme": false,
-    "backgroundImage":"",
-    "suggestionVendor":"baidu",
-    "engineBtnTrigerOnclick":false,
-    "engineCompactLayout":true,
-    "linksWaterfallLayout":true,
-    "linksTitleColorBg":false,
-    "linksColumn":2,
-    "showEnglishSentence":true,
-    "showWeather":true,
-    "showTime":true,
-    "showDate":true,
-    "longTextLimit":40,
-    "historyLimit":5,
-    "recordHistory":true,
-    "colorList": ["#8d8d8d","#7fff00","#1e90ff"],
-    "colorList2": ["#343434","#cda0cd"]
+  "M":{
+    "hist":[],
+    "seen":"onelook"
+  },
+  "X":{
+    "darkUI":true,
+    "soloUI":false,
+    "sugVendor":"sogou",
+    "limHist":55,
+    "useHist":true
   }
 }
 ```
 
-| name                  | type    | value   | description    |
-| :---                  | :---    | :----   | :---------     |
-|darkTheme              | boolean | false   | apply dark color template |
-|suggestionVendor       | string  | "baidu" | web keyword suggestion provider, possible value: 'baidu', 'sogou', 'bing', '360' |
-|backgroundImage        | string  | ""      | url or local file url (file://...). if you want to use local pictrue, save Webpage to local, for secure reason web browser <em>Not allowed to load local </em>.|
-|engineBtnTrigerOnclick | boolean | false   | submit result directly when you click engine button   |
-|engineCompactLayout    | boolean | true    | when 'false', each group engine will take up one line |
-|linksWaterfallLayout   | boolean | true    | use waterfall layout |
-|linksTitleColorBg      | boolean | false   | use color as background-color for links group title |
-|linksColumn            | Int     | 2       | how many column the links occupied |
-|showEnglishSentence    | boolean | true    | see https://api.eatrice.top |
-|showWeather            | boolean | true    | weather information  |
-|showTime               | boolean | true    | 24h time information |
-|showDate               | boolean | true    | date information     |
-|longTextLimit          | Int     | 40      | long text editor will show if input character over this limit |
-|historyLimit           | Int     | 5       | how many history should be saved |
-|recordHistory          | boolean | true    | use search history               |
-|colorList              | strArr  | ["#8d8d8d","#7fff00","#1e90ff"], | color apply in search engine button |
-|colorList2             | strArr  | ["#343434","#cda0cd"]            | color apply in links group title    |
+## usage
+
+|key[0] | Fn  |
+|:------|:----|
+| .     | js regex search engines (site:) |
+| /     | js regex search links           |
+| ?     | js regex search history         |
+| !     | js regex search function        |
+
+### quick mod
+create new search engine, if xxx already exist, it will be update
+
+   .xxx;;class;;http://example.com/?q=%s
+
+use the "space" class (viz. represent null or void), to delete(d) or read(r) search engine
+
+   .xxx;; ;;d
+   .xxx;; ;;r
+
+same as links
+
+   /xxx;;class;;http://example.com/
+   /xxx;; ;;d
+   /xxx;; ;;r
+
+## options
+
+|name     |value  |description|
+|:---     |:---   |:--------- |
+|darkUI   |true   | use light or dark UI, can be toggle use '!\_sw\_darkUI()' |
+|soloUI   |false  | use solo UI, the search engin and links will hidden |
+|sugVendor|sogou  | use web suggestion api from 7 site, use '!\_sw\_sugVendor()' to see possible value |
+|limHist  |55     | how many history should be record |
+|useHist  |true   | whether to record history or not |
+
+ __NOTE__ : db.M.seen memorized last used search engine, you can set it at configure file.
+
+## extra function
+
+file transfer service use file.io API
+
+qrcode generate use qrjs2 library
+
+## pro tips
+
+- you can use file on internet as site's database
+- use '!\_clr\_taxo()' clear all void class
+- use '!\_clr\_localStorage()' clear all database and save webpage to local,
+ them you can launch it from local, no js or css, just one html.
 

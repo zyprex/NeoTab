@@ -1,22 +1,204 @@
 {
   "L":{
-    "Nav":[
+    "💼":[
+      {"n":"无解搜","u":"http://wujiesou.com/"},
+      {"n":"KIM","u":"https://kim.plopco.com/"},
+      {"n":"Linggle 10^12","u":"https://linggle.com/"},
+      {"n":"Magi","u":"https://magi.com/"},
+      {"n":"RefSeek","u":"https://www.refseek.com/"},
+      {"n":"LMGTFY","u":"https://lmgtfy.app/"},
+      {"n":"iSearchX","u":"https://isearchx.com/"}
+    ],
+    "🧭":[
+      {"n":"龙轩导航","u":"http://ilxdh.com/"},
       {"n":"AnywhereAnything","u":"http://lackar.com/aa/"},
-      {"n":"LMGTFY","u":"https://lmgtfy.app/"}
+      {"n":"虫部落快搜","u":"https://search.chongbuluo.com/"},
+      {"n":"不思议导航","u":"https://orxing.top/nav/"},
+      {"n":"爱达杂货铺","u":"https://adzhp.cn/"},
+      {"n":"果汁导航","u":"http://guozhivip.com/"},
+      {"n":"黑点导航","u":"http://www.ihddh.com/"},
+      {"n":"简法主页","u":"https://www.jianfast.com/"},
+      {"n":"我知网","u":"http://www.wozhi.wang/"},
+      {"n":"万花筒","u":"https://wht.im/"},
+      {"n":"某柠檬","u":"https://www.moulem.com/"},
+      {"n":"36Start","u":"http://www.36start.com/"},
+      {"n":"24k导航","u":"https://www.24kdh.com/"},
+      {"n":"笔点","u":"https://www.bidianer.com/"},
+      {"n":"炫猿","u":"https://xydh.fun/"}
+    ],
+    "🧱":[
+      {"n":"国家哲学社会科学文献中心","u":"http://www.ncpssd.org/"},
+      {"n":"iData-知识检索","u":"https://www.cn-ki.net/"},
+      {"n":"Encyclopedia of Life","u":"https://eol.org/"},
+      {"n":"最美网站","u":"https://zuimeix.com/"},
+      {"n":"问答库","u":"https://www.asklib.com/"},
+      {"n":"大数据导航","u":"http://hao.199it.com/"},
+      {"n":"万千合集站","u":"http://www.hejizhan.com/bbs/"},
+      {"n":"程序员导航","u":"http://code.giffox.com/"},
+      {"n":"国外网站大全","u":"http://www.world68.com/"},
+      {"n":"阿猫阿狗导航","u":"https://dh.woshipm.com/"},
+      {"n":"W3Cschool极客导航","u":"https://123.w3cschool.cn/"}
+    ],
+    "🎞️":[
+      {"n":"字幕库","u":"http://zmk.tw"},
+      {"n":"茶杯狐","u":"https://www.cupfox.com/"},
+      {"n":"电影推荐-太空船博客","u":"https://www.boatsky.com/movie/list"},
+      {"n":"Movie Quotes","u":"http://www.subzin.com/"}
+    ],
+    "🖥️":[
+      {"n":"系统极客","u":"http://www.sysgeek.cn/"},
+      {"n":"How-To Geek","u":"https://www.howtogeek.com/"},
+      {"n":"HowStuffWorks","u":"https://www.howstuffworks.com/"},
+      {"n":"Linux Handbook","u":"https://linuxhandbook.com/"}
+    ],
+    "🎨":[
+      {"n":"ICONSVG","u":"https://iconsvg.xyz/"},
+      {"n":"Iconify","u":"https://iconify.design/icon-sets/"},
+      {"n":"iconmonstr","u":"https://iconmonstr.com/"},
+      {"n":"Noun Project","u":"https://thenounproject.com/"},
+      {"n":"vcg.com","u":"https://www.vcg.com/"},
+      {"n":"Awwwards","u":"http://www.awwwards.com/"},
+      {"n":"Emoji Cheat Sheet","u":"https://emojicheatsheet.com/"},
+      {"n":"wallroom","u":"https://wallroom.io/"},
+      {"n":"WallpapersWide.com","u":"http://wallpaperswide.com/"},
+      {"n":"WallpapersCraft","u":"https://wallpaperscraft.com/"},
+      {"n":"Simple Icons","u":"http://simpleicons.p2hp.com/"}
+    ],
+    "🍬":[
+      {"n":"Slant","u":"https://www.slant.co/"},
+      {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
+      {"n":"Office教程网","u":"https://www.office26.com/"},
+      {"n":"软件SOS","u":"https://www.rjsos.com/"},
+      {"n":"精品网站导航","u":"https://imyshare.com/"},
+      {"n":"分享者","u":"http://www.sharerw.com/"}
+    ],
+    "📚":[
+      {"n":"WHO","u":"https://www.who.int/zh"},
+      {"n":"穷游网","u":"http://search.qyer.com/"},
+      {"n":"考试酷","u":"https://www.examcoo.com/index/ku"},
+      {"n":"全历史","u":"https://www.allhistory.com/"},
+      {"n":"译学馆","u":"https://www.yxgapp.com/"},
+      {"n":"丁香园","u":"https://portal.dxy.cn/"},
+      {"n":"医学微视","u":"https://www.mvyxws.com/"},
+      {"n":"下厨房","u":"https://www.xiachufang.com/"},
+      {"n":"默沙东诊疗手册","u":"https://www.msdmanuals.com/zh"},
+      {"n":"中国数字科技馆","u":"https://www.cdstm.cn/"},
+      {"n":"Yahoo Answers","u":"https://answers.yahoo.com/"},
+      {"n":"Answers","u":"https://www.answers.com/"},
+      {"n":"Stack Exchange","u":"https://stackexchange.com/"}
+    ],
+    "🧰":[
+      {"n":"在线工具","u":"https://www.atool99.com/"},
+      {"n":"和风天气","u":"https://www.qweather.com/"},
+      {"n":"asciiflow","u":"http://asciiflow.com/"},
+      {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
+    ],
+    "📘":[
+      {"n":"Library Genesis","u":"http://libgen.rs/"},
+      {"n":"好讀","u":"http://www.haodoo.net/?M=hd&P=welcome"},
+      {"n":"书格","u":"https://new.shuge.org/"},
+      {"n":"天赋好书","u":"https://www.cntofu.com/"},
+      {"n":"中国哲学书电子化计划","u":"https://ctext.org/zhs"},
+      {"n":"全国图书馆参考咨询联盟","u":"http://www.ucdrs.superlib.net/"}
+    ],
+    "📰":[
+      {"n":"SegmentFault","u":"https://segmentfault.com/"},
+      {"n":"V2EX","u":"https://www.v2ex.com/"},
+      {"n":"USA TODAY","u":"https://www.usatoday.com/"},
+      {"n":"wired","u":"https://www.wired.com/"},
+      {"n":"后续","u":"https://houxu.app/"},
+      {"n":"奇客solidot","u":"https://www.solidot.org/"},
+      {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
+    ],
+    "😃":[
+      {"n":"xkcd","u":"https://xkcd.com/"},
+      {"n":"Existential Comics","u":"https://existentialcomics.com/"}
     ]
   },
   "S":{
-    "Norm":[
+    "🔍":[
+      {"n":"google","s":"https://www.google.com/search?q=%s"},
+      {"n":"sogou weixin","s":"http://www.sogou.com/web?query=%s"},
+      {"n":"doge","s":"https://www.dogedoge.com/results?q=%s","i":"https://www.dogedoge.com/assets/doge_ico.png"},
       {"n":"bing","s":"https://cn.bing.com/search?q=%s"},
-      {"n":"baidu","s":"https://www.baidu.com/s?wd=%s"}
+      {"n":"360","s":"https://www.so.com/s?q=%s"},
+      {"n":"baidu tieba zhidao","s":"https://www.baidu.com/s?wd=%s"},
+      {"n":"ecosia","s":"https://www.ecosia.org/search?q=%s","i":"https://cdn.ecosia.org/assets/images/ico/favicon.ico"},
+      {"n":"yandex","s":"https://yandex.com/search/?text=%s"},
+      {"n":"lookao","s":"https://lookao.com/search?q=%s"},
+      {"n":"mengso","s":"https://mengso.com/search?q=%s"},
+      {"n":"gigablast","s":"https://www.gigablast.com/search?&q=%s"},
+      {"n":"goobe","s":"https://goobe.io/search.aspx?k=%s"},
+      {"n":"miji","s":"https://mijisou.com/search?q=%s","i":"https://mijisou.com/themes/entropage/img/favicon.png?staticVersion=1557735741"}
+    ],
+    "🛒":[
+      {"n":"amazon","s":"https://www.amazon.com/s?k=%s"},
+      {"n":"JD","s":"https://search.jd.com/Search?keyword=%s"},
+      {"n":"tmall","s":"https://list.tmall.com/search_product.htm?q=%s"},
+      {"n":"dangdang","s":"http://search.dangdang.com/?key=%s"},
+      {"n":"dianping","s":"http://www.dianping.com/search/keyword/1/0_%s","i":"http://www.dpfile.com/app/pc-common/dp_favicon.a4af753914321c8e82e402e2b4be01d7.ico"},
+      {"n":"mogu","s":"https://list.mogu.com/search/goods?q=%s","i":"https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png"},
+      {"n":"smzdm","s":"https://search.smzdm.com/?s=%s"}
+    ],
+    "🌏":[
+      {"n":"zdic","s":"http://www.zdic.net/hans/%s"},
+      {"n":"iciba","s":"http://www.iciba.com/word?w=%s","i":"http://cdn.iciba.com/www/img/www/favicon.ico"},
+      {"n":"youdao","s":"https://www.youdao.com/w/eng/%s","i":"https://shared.ydstatic.com/images/favicon.ico"},
+      {"n":"onelook","s":"https://www.onelook.com/?w=%s"},
+      {"n":"Ludwig","s":"https://ludwig.guru/s/%s"},
+      {"n":"translate","s":"https://translate.google.cn/#view=home&op=translate&sl=auto&tl=auto&text=%s"},
+      {"n":"quword","s":"https://www.quword.com/w/%s"}
+    ],
+    "⌨️":[
+      {"n":"github","s":"https://github.com/search?utf8=&q=%s"},
+      {"n":"runoob","s":"https://www.runoob.com/?s=%s","i":"https://static.runoob.com/images/favicon.ico"},
+      {"n":"MDN","s":"https://developer.mozilla.org/en-US/search?q=%s"},
+      {"n":"CodePen","s":"https://codepen.io/search/pens?q=%s"},
+      {"n":"juejin","s":"https://juejin.cn/search?query=%s"},
+      {"n":"OSCHINA","s":"https://www.oschina.net/search?q=%s"},
+      {"n":"cnblogs","s":"https://zzk.cnblogs.com/s?w=%s","i":"https://www.cnblogs.com/favicon.ico"},
+      {"n":"CSDN","s":"https://so.csdn.net/so/search/all?q=%s"}
+    ],
+    "🎞":[
+      {"n":"youku","s":"https://so.youku.com/search_video/q_%s"},
+      {"n":"iqiyi","s":"https://so.iqiyi.com/so/q_%s","i":"https://www.iqiyi.com/favicon.ico"},
+      {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s"},
+      {"n":"v.qq","s":"https://v.qq.com/x/search/?q=%s"},
+      {"n":"bilibili","s":"https://search.bilibili.com/all?keyword=%s"}
+    ],
+    "👪":[
+      {"n":"zhihu","s":"https://www.zhihu.com/search?q=%s"},
+      {"n":"douban","s":"https://www.douban.com/search?q=%s"},
+      {"n":"sspai","s":"https://sspai.com/search/article?q=%s","i":"https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico"},
+      {"n":"guokr","s":"https://www.guokr.com/search/all/?wd=%s"},
+      {"n":"jianshu","s":"https://www.jianshu.com/search?q=%s"}
+    ],
+    "📰":[
+      {"n":"toutiao","s":"https://www.toutiao.com/search/?keyword=%s"},
+      {"n":"weibo","s":"https://s.weibo.com/weibo/%s"}
+    ],
+    "❔":[
+      {"n":"FANDOM","s":"https://www.fandom.com/?s=%s"},
+      {"n":"MBA","s":"http://wiki.mbalib.com/wiki/Special:Search?search=%s"},
+      {"n":"wikihow","s":"http://zh.wikihow.com/wikiHowTo?search=%s"},
+      {"n":"jikipedia","s":"https://jikipedia.com/search?phrase=%s"}
+    ],
+    "📷":[
+      {"n":"huaban","s":"https://huaban.com/search/?q=%s"}
+    ],
+    "♾️":[
+      {"n":"wolframAlpha","s":"https://www.wolframalpha.com/input/?i=%s"}
     ]
   },
-  "M":{"hist":[],"seen":"baidu"},
+  "M":{
+    "hist":[],
+    "seen":"sogou weixin"
+  },
   "X":{
     "darkUI":true,
     "soloUI":false,
     "sugVendor":"sogou",
-    "limHist":10,
+    "limHist":55,
     "useHist":true
   }
 }
