@@ -29,6 +29,25 @@ the essential example of configure file
 }
 ```
 
+parameters abbr:
+
+```
+L links
+  n name
+  u url
+
+S searcher
+  n name
+  s search
+  m mobile compatible search (optional)
+  i favicon (optional)
+
+M memo
+
+X options
+
+```
+
 ## usage
 
 |key[0] | Fn  |

@@ -297,7 +297,11 @@ function gen_S() {
     s.appendChild(addElem("b",ar));
     db.S[ar].forEach(function(c){
       let csear=addElem("button",c.n);
-      csear.setAttribute("data-s",c.s);
+      if ( navigator.userAgent.includes('Mobile') && c.m ) {
+        csear.setAttribute("data-s",c.m);
+      } else {
+        csear.setAttribute("data-s",c.s);
+      }
       if (c.i) {
         csear.setAttribute("data-i",c.i);
       } else {

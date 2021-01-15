@@ -65,12 +65,14 @@
       {"n":"Simple Icons","u":"http://simpleicons.p2hp.com/"}
     ],
     "🍬":[
+      {"n":"Office教程网","u":"https://www.office26.com/"},
       {"n":"Slant","u":"https://www.slant.co/"},
       {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
-      {"n":"Office教程网","u":"https://www.office26.com/"},
       {"n":"软件SOS","u":"https://www.rjsos.com/"},
       {"n":"精品网站导航","u":"https://imyshare.com/"},
-      {"n":"分享者","u":"http://www.sharerw.com/"}
+      {"n":"分享者","u":"http://www.sharerw.com/"},
+      {"n":"干货集中营","u":"https://gank.io/"},
+      {"n":"不死鸟","u":"https://iao.su/"}
     ],
     "📚":[
       {"n":"WHO","u":"https://www.who.int/zh"},
@@ -88,6 +90,7 @@
       {"n":"Stack Exchange","u":"https://stackexchange.com/"}
     ],
     "🧰":[
+      {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
@@ -133,17 +136,17 @@
     ],
     "🛒":[
       {"n":"amazon","s":"https://www.amazon.com/s?k=%s"},
-      {"n":"JD","s":"https://search.jd.com/Search?keyword=%s"},
+      {"n":"JD","s":"https://search.jd.com/Search?keyword=%s","m":"https://so.m.jd.com/ware/search.action?keyword=%s"},
       {"n":"tmall","s":"https://list.tmall.com/search_product.htm?q=%s"},
-      {"n":"dangdang","s":"http://search.dangdang.com/?key=%s"},
-      {"n":"dianping","s":"http://www.dianping.com/search/keyword/1/0_%s","i":"http://www.dpfile.com/app/pc-common/dp_favicon.a4af753914321c8e82e402e2b4be01d7.ico"},
-      {"n":"mogu","s":"https://list.mogu.com/search/goods?q=%s","i":"https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png"},
-      {"n":"smzdm","s":"https://search.smzdm.com/?s=%s"}
+      {"n":"dangdang","s":"http://search.dangdang.com/?key=%s","m":"http://search.m.dangdang.com/search.php?keyword=%s"},
+      {"n":"dianping","s":"http://www.dianping.com/search/keyword/1/0_%s","m":"https://m.dianping.com/shoplist/3/search?from=m_search&keyword=%s","i":"http://www.dpfile.com/app/pc-common/dp_favicon.a4af753914321c8e82e402e2b4be01d7.ico"},
+      {"n":"mogu","s":"https://list.mogu.com/search/goods?q=%s","m":"https://m.mogu.com/wall/s?q=%s","i":"https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png"},
+      {"n":"smzdm","s":"https://search.smzdm.com/?s=%s","m":"https://search.m.smzdm.com/?s=%s"}
     ],
     "🌏":[
       {"n":"zdic","s":"http://www.zdic.net/hans/%s"},
       {"n":"iciba","s":"http://www.iciba.com/word?w=%s","i":"http://cdn.iciba.com/www/img/www/favicon.ico"},
-      {"n":"youdao","s":"https://www.youdao.com/w/eng/%s","i":"https://shared.ydstatic.com/images/favicon.ico"},
+      {"n":"youdao","s":"https://www.youdao.com/w/eng/%s","m":"https://m.youdao.com/dict?le=eng&q=%s","i":"https://shared.ydstatic.com/images/favicon.ico"},
       {"n":"onelook","s":"https://www.onelook.com/?w=%s"},
       {"n":"Ludwig","s":"https://ludwig.guru/s/%s"},
       {"n":"translate","s":"https://translate.google.cn/#view=home&op=translate&sl=auto&tl=auto&text=%s"},
@@ -157,24 +160,24 @@
       {"n":"juejin","s":"https://juejin.cn/search?query=%s"},
       {"n":"OSCHINA","s":"https://www.oschina.net/search?q=%s"},
       {"n":"cnblogs","s":"https://zzk.cnblogs.com/s?w=%s","i":"https://www.cnblogs.com/favicon.ico"},
-      {"n":"CSDN","s":"https://so.csdn.net/so/search/all?q=%s"}
+      {"n":"CSDN","s":"https://so.csdn.net/so/search/all?q=%s","m":"https://so.csdn.net/so/search/s.do?q=%s"}
     ],
     "🎞":[
-      {"n":"youku","s":"https://so.youku.com/search_video/q_%s"},
+      {"n":"youku","s":"https://so.youku.com/search_video/q_%s","m":"https://search.youku.com/search_video?keyword=%s"},
       {"n":"iqiyi","s":"https://so.iqiyi.com/so/q_%s","i":"https://www.iqiyi.com/favicon.ico"},
-      {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s"},
-      {"n":"v.qq","s":"https://v.qq.com/x/search/?q=%s"},
+      {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s","m":"https://m.tv.sohu.com/upload/h5/m/mso.html?key=%s"},
+      {"n":"tv.qq","s":"https://v.qq.com/x/search/?q=%s"},
       {"n":"bilibili","s":"https://search.bilibili.com/all?keyword=%s"}
     ],
     "👪":[
       {"n":"zhihu","s":"https://www.zhihu.com/search?q=%s"},
-      {"n":"douban","s":"https://www.douban.com/search?q=%s"},
-      {"n":"sspai","s":"https://sspai.com/search/article?q=%s","i":"https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico"},
-      {"n":"guokr","s":"https://www.guokr.com/search/all/?wd=%s"},
+      {"n":"douban","s":"https://www.douban.com/search?q=%s","m":"https://m.douban.com/search/?query=%s"},
+      {"n":"sspai","s":"https://sspai.com/search/post/%s","i":"https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico"},
+      {"n":"guokr","s":"https://www.guokr.com/search/all/?wd=%s","m":"https://m.guokr.com/scientific/search?word=%s"},
       {"n":"jianshu","s":"https://www.jianshu.com/search?q=%s"}
     ],
     "📰":[
-      {"n":"toutiao","s":"https://www.toutiao.com/search/?keyword=%s"},
+      {"n":"toutiao","s":"https://www.toutiao.com/search/?keyword=%s","m":"https://so.toutiao.com/search/?keyword=%s"},
       {"n":"weibo","s":"https://s.weibo.com/weibo/%s"}
     ],
     "❔":[
