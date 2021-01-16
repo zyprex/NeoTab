@@ -202,6 +202,7 @@
     "soloUI":false,
     "sugVendor":"sogou",
     "limHist":55,
-    "useHist":true
+    "useHist":true,
+    "winOpen":true
   }
 }
