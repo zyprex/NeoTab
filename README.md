@@ -60,7 +60,7 @@ X options
 ### quick mod
 create new search engine, if xxx already exist, it will be update
 
-   .xxx;;class;;http://example.com/?q=%s
+   .xxx;;GroupName;;http://example.com/?q=%s;;http://cdn.static.example/icon.ico;;http://m.example.com/?q=%s
 
 use the "space" class (viz. represent null or void), to delete(d) or read(r) search engine
 
@@ -82,6 +82,7 @@ same as links
 |sugVendor|sogou  | use web suggestion api from 7 site, use '!\_sw\_sugVendor()' to see possible value |
 |limHist  |55     | how many history should be record |
 |useHist  |true   | whether to record history or not |
+|winOpen  |true   | whether to open new window or not |
 
  __NOTE__ : db.M.seen memorized last used search engine, you can set it at configure file.
 
