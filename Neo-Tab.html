@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Neo-Tab</title><meta name="description" content="Neo Tab -- a simple web navigation page which can be customized content as you wish"><meta name="viewport" content="width=device-width,initial-scale=1">
-
+<title>Neo-Tab</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
 :root{
   --m-fg:#373737;--m-bg:#A0A0A0;
@@ -13,14 +13,15 @@
 }
 *,*>*{box-sizing:border-box;}
 body{all:unset;font-size:100%;font-family:sans-serif;}
+body *{color:var(--m-fg);background-color:var(--m-bg);}
 center>svg{margin:2px;}
-center>svg:hover{border:1px solid var(--a-bg);box-shadow:2px 2px 0px var(--a-bg);}
+center>svg:hover{border:2px solid var(--a-bg);}
 #main{margin:1em auto;width:60%;}
 @media screen and (max-width:800px){#main{margin:0.4em auto;width:90%;}}
 #eph *{margin:0 auto;padding:1px 6px;}
 #kw{width:100%;font-size:150%;}
 #kw::placeholder{width:100%;text-align:center;}
-#kws{font-size:150%;position:absolute;overflow:hidden;}
+#kws{font-size:150%;position:absolute;overflow:auto;}
 #kws>option{padding:0 8px;}
 #kws>option:hover{color:var(--m-bg);background-color:var(--m-fg);}
 #kws>option:before{
@@ -28,7 +29,7 @@ center>svg:hover{border:1px solid var(--a-bg);box-shadow:2px 2px 0px var(--a-bg)
   font-weight:600;
   font-size:60%;
   color:var(--m-bg);
-  background-color: var(--a-bg);
+  background-color:var(--a-bg);
   border-radius:100%;
   padding:4px;
   margin-right:8px;
@@ -39,7 +40,6 @@ center>svg:hover{border:1px solid var(--a-bg);box-shadow:2px 2px 0px var(--a-bg)
   padding:4px;
   margin:2px;
 }
-body,#edi,#s>*,#l>*,#kw,#kws,#sws{color:var(--m-fg);background-color:var(--m-bg);}
 .kws-s{color:var(--c-G);}
 .kws-l{color:var(--c-B);}
 .kws-h{color:var(--c-Y);}
@@ -47,16 +47,10 @@ body,#edi,#s>*,#l>*,#kw,#kws,#sws{color:var(--m-fg);background-color:var(--m-bg)
 #s{max-height:250px;overflow-y:auto;}
 #s,#l{display:flex;flex-wrap:wrap;margin:.6em 0;}
 #s *,#l *{padding:0 2px;font-size:110%;}
-#s>b:after{content:" ▷ ";}
-#l>b:after{content:" ▶ ";}
-#s>button,#l>a{border:none;text-decoration:none;margin:0 3px;}
-#s>button{border-top:2px solid var(--a-bg);}
-#l>a{border-bottom:2px solid var(--a-bg);}
-.hcs,#s>button:hover,#l>a:hover{
-  transition:all .3s;
-  color:var(--a-fg);
-  background-color:var(--a-bg);
-}
+#s>b:after{content:"▷";}
+#l>b:after{content:"▶";}
+#s>button,#l>a{border:none;border-bottom:2px solid var(--a-bg);text-decoration:none;margin:0 3px;}
+#s>button:hover,#l>a:hover{color:var(--a-fg);background-color:var(--a-bg);}
 #si_box{margin:2px;height:48px;}
 #si{border-radius:4px;background-color:#34343450;}
 #edi{
@@ -80,36 +74,32 @@ body,#edi,#s>*,#l>*,#kw,#kws,#sws{color:var(--m-fg);background-color:var(--m-bg)
   <div id="eph"></div>
   <center>
   <svg id="t_edi" onclick="edi.value=kw.value;edi.hidden=false;edi.focus();" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
-  <svg id="t_sea" onclick="tEmu('.')" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-  <svg id="t_lnk" onclick="tEmu('/')" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-  <svg id="t_his" onclick="tEmu('?')" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-  <svg id="t_opt" onclick="tEmu('!')" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+  <svg id="t_sea" onclick="tEmu('.');feedS(kw.value.slice(1))" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  <svg id="t_lnk" onclick="tEmu('/');feedL(kw.value.slice(1))" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  <svg id="t_his" onclick="tEmu('?');feedH(kw.value.slice(1))" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+  <svg id="t_opt" onclick="tEmu('!');feedF(kw.value.slice(1))" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
   <svg id="t_ucf" onclick="if(confirm('upload file to file.io ?'))fu.click();" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7-1.6V21"/><path d="M16 16l-4-4-4 4"/></svg>
   <svg id="t_qrc" onclick="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M2 1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm1 2v6h6V3H3z"/><path d="M5 5h2v2H5z" fill-rule="evenodd"/><path d="M14 1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm1 2v6h6V3h-6z"/><path d="M17 5h2v2h-2z" fill-rule="evenodd"/><path d="M2 13h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm1 2v6h6v-6H3z"/><path d="M5 17h2v2H5z" fill-rule="evenodd"/><path d="M23 19h-4v4h-5a1 1 0 0 1-1-1v-8v5h2v2h2v-6h-2v-2h-1h3v2h2v2h2v-4h1a1 1 0 0 1 1 1v5zm0 2v1a1 1 0 0 1-1 1h-1v-2h2z"/></svg>
   </center>
   <center id="si_box" onclick="o();">
     <img id="si" width="48px" height="48px"/>
   </center>
+  <select id="sws" size="0" tabindex="3"></select>
   <input type="search" id="kw" autocomplete="off" spellcheck="false" tabindex="1" autofocus/>
   <div id="ph"></div>
   <select hidden id="kws" size="0" tabindex="2"></select>
-  <div style="display:flex;">
-    <div style="margin-left:auto;"></div>
-    <select hidden id="sws" size="0" tabindex="3"></select>
-  </div>
-  <div id="d_btn">get db from:<button id="d_l">local file</button><button id="d_r">remote file</button></div>
+  <div id="pp" style="text-align:right;width:100%;">WH</div>
+  <div id="d_btn">get db @<button id="d_l">local file</button><button id="d_r">remote file</button></div>
   <div id="l"></div>
   </div>
-  <footer style="width:100%;text-align:center;margin-top:10em;">&copy;2021 &bull; zyprex</footer>
 
 <script>
 'use strict';
-let db,gK0,gK1, gJustGo=true,
-gRemotedb="https://neotab.vercel.app/db.json",
+let db,gK0,gK1,gJustGo=true,gPp="",
+gRDb="https://neotab.vercel.app/db.json",
 gFn = [
   "_sw_darkUI()",
   "_sw_soloUI()",
-  "_sw_sugVendor()",
   "_sw_limHist()",
   "_sw_useHist()",
   "_sw_winOpen()",
@@ -168,7 +158,6 @@ function init_db() {
 * _r_db()
 * _sw_darkUI()
 * _sw_soloUI()
-* _sw_sugVendor()
 * _sw_limHist()
 * _sw_useHist()
 * _sw_winOpen()
@@ -277,9 +266,6 @@ function _sw_soloUI() {
   w_db();
   chg_soloUI();
 }
-function _sw_sugVendor(){
-  sws.hidden=!sws.hidden;
-}
 function _sw_limHist() {
   let v = prompt("limited history (number): ",db.X.limHist);
   v=isNaN(Number(v))?10:Number(v);
@@ -289,13 +275,25 @@ function _sw_limHist() {
 }
 function _sw_useHist() {
   db.X.useHist = !db.X.useHist;
+  if (db.X.useHist) {
+    gPp += 'H';
+  } else {
+    gPp = gPp.replace("H",'');
+  }
+  pp.innerHTML = gPp;
   w_db();
   alert("use history state:\n"+db.X.useHist);
 }
 function _sw_winOpen() {
   db.X.winOpen = !db.X.winOpen;
   w_db();
-  alert("use new window open state:\n"+db.X.winOpen);
+  if (db.X.winOpen) {
+    gPp += 'W';
+  } else {
+    gPp = gPp.replace("W",'');
+  }
+  pp.innerHTML = gPp;
+  alert("new window open:\n"+db.X.winOpen);
 }
 function gen_L() {
   l.innerHTML="";
@@ -683,9 +681,13 @@ function fillKwsMore(ar) {
 edi.oninput=function(){window.kw.value=this.value;};
 edi.onblur=function(){edi.hidden=true;};
 function tEmu(k) {
-  kw.value=k+kw.value;
+  let ar = [".","/","?","!"];
+  if (ar.indexOf(kw.value.slice(0,1))>-1) {
+    kw.value=k+kw.value.slice(1);
+  } else {
+    kw.value=k+kw.value;
+  }
   kw.focus();
-  feedS(kw.value.slice(1));
 }
 fu.onchange = function(){
   let fD = new FormData();
@@ -793,11 +795,11 @@ fs.onchange = function(){
   };
 };
 d_r.onclick = function (){
-  let v = prompt("input url:", gRemotedb);
-  gRemotedb = v;
+  let v = prompt("input url:", gRDb);
+  gRDb = v;
   if (v=="")
-    gRemotedb = "https://neotab.vercel.app/db.json";
-  fetch(gRemotedb)
+    gRDb = "https://neotab.vercel.app/db.json";
+  fetch(gRDb)
   .then(function(res){return res.json();})
   .then(function(j){db=j;w_db();location.reload();})
   .catch(function (err){alert('Request Failed\n'+err);});
@@ -821,6 +823,9 @@ d_r.onclick = function (){
       kw.placeholder = new Date().toLocaleDateString('local',opt);
     }
   },1000);
+  if (db.X.winOpen) gPp += 'W';
+  if (db.X.useHist) gPp += 'H';
+  pp.innerHTML = gPp;
 })();
 </script>
 </body>

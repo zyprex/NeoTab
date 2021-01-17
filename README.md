@@ -1,5 +1,7 @@
 # Neo-Tab
 
+Neo Tab is a simple web navigation page which can be customized content as you wish
+
 the essential example of configure file
 
 ```json

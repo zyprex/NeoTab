@@ -1,7 +1,7 @@
 " ======================================================================
 " File: min.vim
 " Author: zyprex
-" Description: minify html css js
+" Description: minify html css js, save 20% size
 " Usage: execute command ':so min.vim'
 " Last Modified: January 14, 2021
 " ======================================================================
@@ -19,7 +19,16 @@ endwhile
 "#3 clear //...
 %s/^\/\/.*/
 "#4 remove space between symbol
-%s/\s*\(&&\|||\|%\|?\|!\|:\|=\|,\|;\|}\|{\|)\|(\|\]\|\[\)\s*/\1/
+"%s/\s*\(&&\|||\|%\|?\|!\|:\|=\|+\|,\|;\|}\|{\|)\|(\|\]\|\[\)\s*/\1/
+%s/""/SPACESTRINGRP0/
+%s/" "/SPACESTRINGRP1/
+%s/"  "/SPACESTRINGRP2/
+%s/\s*\(\W\)\s*/\1/
+"#4.1 special case
+%s/SPACESTRINGRP0/""/
+%s/SPACESTRINGRP1/" "/
+%s/SPACESTRINGRP2/"  "/
+%s/\(#s\|#l\|#eph\|body\)\*/\1 \*/
 %s/and(/and (/
 "#5 remove linefeed
 %s/\n/
