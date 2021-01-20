@@ -2,6 +2,7 @@
   "L":{
     "💼":[
       {"n":"无解搜","u":"http://wujiesou.com/"},
+      {"n":"书签地球","u":"https://www.bookmarkearth.com/"},
       {"n":"KIM","u":"https://kim.plopco.com/"},
       {"n":"Linggle 10^12","u":"https://linggle.com/"},
       {"n":"Magi","u":"https://magi.com/"},
@@ -15,6 +16,7 @@
       {"n":"虫部落快搜","u":"https://search.chongbuluo.com/"},
       {"n":"不思议导航","u":"https://orxing.top/nav/"},
       {"n":"爱达杂货铺","u":"https://adzhp.cn/"},
+      {"n":"果壳任意门","u":"http://www.gkbang.cn/link/"},
       {"n":"果汁导航","u":"http://guozhivip.com/"},
       {"n":"黑点导航","u":"http://www.ihddh.com/"},
       {"n":"简法主页","u":"https://www.jianfast.com/"},
@@ -24,18 +26,36 @@
       {"n":"36Start","u":"http://www.36start.com/"},
       {"n":"24k导航","u":"https://www.24kdh.com/"},
       {"n":"笔点","u":"https://www.bidianer.com/"},
-      {"n":"炫猿","u":"https://xydh.fun/"}
+      {"n":"简单导航","u":"https://hao.hrka.net/"},
+      {"n":"软核主页","u":"https://so.softkernel.cn/"},
+      {"n":"北邮人导航","u":"http://byr.wiki/new/"},
+      {"n":"效率集","u":"http://www.xiaolvji.com/"},
+      {"n":"蜗牛导航","u":"https://s.eallion.com/"},
+      {"n":"站搜搜","u":"https://www.zhansousou.com/"},
+      {"n":"集知盒子","u":"https://www.jizhihezi.com/"},
+      {"n":"小宁超级导航","u":"https://cj.wattlq.cn/"},
+      {"n":"收库123","u":"https://shouku123.com/"},
+      {"n":"东东起始页","u":"https://www.cuipc.cn/"},
+      {"n":"Seeseed","u":"https://www.seeseed.com/"},
+      {"n":"偷渡鱼","u":"https://touduyu.com/"},
+      {"n":"酷站导航","u":"https://www.coolzhanweb.com/"},
+      {"n":"比格张","u":"https://bigezhang.com/"},
+      {"n":"MyWeb100","u":"https://myweb100.com/"},
+      {"n":"炫猿","u":"https://xydh.fun/"},
+      {"n":"Fulck","u":"https://fulck.com/"}
     ],
     "🧱":[
       {"n":"国家哲学社会科学文献中心","u":"http://www.ncpssd.org/"},
       {"n":"iData-知识检索","u":"https://www.cn-ki.net/"},
       {"n":"Encyclopedia of Life","u":"https://eol.org/"},
+      {"n":"鱼塘热榜","u":"https://mo.fish/"},
       {"n":"最美网站","u":"https://zuimeix.com/"},
       {"n":"问答库","u":"https://www.asklib.com/"},
       {"n":"大数据导航","u":"http://hao.199it.com/"},
       {"n":"万千合集站","u":"http://www.hejizhan.com/bbs/"},
       {"n":"程序员导航","u":"http://code.giffox.com/"},
-      {"n":"国外网站大全","u":"http://www.world68.com/"},
+      {"n":"世界各国网址大全","u":"http://www.world68.com/"},
+      {"n":"国外网站推荐","u":"https://www.egouz.com/"},
       {"n":"阿猫阿狗导航","u":"https://dh.woshipm.com/"},
       {"n":"W3Cschool极客导航","u":"https://123.w3cschool.cn/"}
     ],
@@ -68,6 +88,7 @@
       {"n":"Office教程网","u":"https://www.office26.com/"},
       {"n":"Slant","u":"https://www.slant.co/"},
       {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
+      {"n":"PlayOnLinux","u":"https://www.playonlinux.com/en/"},
       {"n":"软件SOS","u":"https://www.rjsos.com/"},
       {"n":"精品网站导航","u":"https://imyshare.com/"},
       {"n":"分享者","u":"http://www.sharerw.com/"},
@@ -92,6 +113,7 @@
     "🧰":[
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
+      {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
       {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
@@ -107,10 +129,12 @@
     "📰":[
       {"n":"SegmentFault","u":"https://segmentfault.com/"},
       {"n":"V2EX","u":"https://www.v2ex.com/"},
+      {"n":"fly63前端网","u":"http://www.fly63.com/"},
       {"n":"USA TODAY","u":"https://www.usatoday.com/"},
       {"n":"wired","u":"https://www.wired.com/"},
       {"n":"后续","u":"https://houxu.app/"},
       {"n":"奇客solidot","u":"https://www.solidot.org/"},
+      {"n":"抽屉新热榜","u":"https://dig.chouti.com/"},
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
     ],
     "😃":[
@@ -166,7 +190,8 @@
       {"n":"youku","s":"https://so.youku.com/search_video/q_%s","m":"https://search.youku.com/search_video?keyword=%s"},
       {"n":"iqiyi","s":"https://so.iqiyi.com/so/q_%s","i":"https://www.iqiyi.com/favicon.ico"},
       {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s","m":"https://m.tv.sohu.com/upload/h5/m/mso.html?key=%s"},
-      {"n":"tv.qq","s":"https://v.qq.com/x/search/?q=%s"},
+      {"n":"v.qq","s":"https://v.qq.com/x/search/?q=%s"},
+      {"n":"AcFun","s":"https://www.acfun.cn/search/?keyword=%s"},
       {"n":"bilibili","s":"https://search.bilibili.com/all?keyword=%s"}
     ],
     "👪":[
@@ -184,7 +209,8 @@
       {"n":"FANDOM","s":"https://www.fandom.com/?s=%s"},
       {"n":"MBA","s":"http://wiki.mbalib.com/wiki/Special:Search?search=%s"},
       {"n":"wikihow","s":"http://zh.wikihow.com/wikiHowTo?search=%s"},
-      {"n":"jikipedia","s":"https://jikipedia.com/search?phrase=%s"}
+      {"n":"jikipedia","s":"https://jikipedia.com/search?phrase=%s"},
+      {"n":"moeWiki","s":"https://zh.moegirl.org.cn/%s"}
     ],
     "📷":[
       {"n":"huaban","s":"https://huaban.com/search/?q=%s"}
@@ -193,16 +219,12 @@
       {"n":"wolframAlpha","s":"https://www.wolframalpha.com/input/?i=%s"}
     ]
   },
-  "M":{
-    "hist":[],
-    "seen":"sogou weixin"
-  },
-  "X":{
-    "darkUI":true,
-    "soloUI":false,
-    "sugVendor":"sogou",
-    "limHist":55,
-    "useHist":true,
-    "winOpen":true
-  }
+  "darkUI":true,
+  "soloUI":false,
+  "limHist":55,
+  "useHist":true,
+  "winOpen":true,
+  "sugVendor":"sogou",
+  "seen":"sogou weixin",
+  "hist":[]
 }

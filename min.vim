@@ -20,12 +20,10 @@ endwhile
 %s/^\/\/.*/
 "#4 remove space between symbol
 "%s/\s*\(&&\|||\|%\|?\|!\|:\|=\|+\|,\|;\|}\|{\|)\|(\|\]\|\[\)\s*/\1/
-%s/""/SPACESTRINGRP0/
 %s/" "/SPACESTRINGRP1/
 %s/"  "/SPACESTRINGRP2/
 %s/\s*\(\W\)\s*/\1/
 "#4.1 special case
-%s/SPACESTRINGRP0/""/
 %s/SPACESTRINGRP1/" "/
 %s/SPACESTRINGRP2/"  "/
 %s/\(#s\|#l\|#eph\|body\)\*/\1 \*/

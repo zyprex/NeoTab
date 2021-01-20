@@ -96,7 +96,8 @@ qrcode generate use qrjs2 library
 
 ## pro tips
 
-- you can use file on internet as site's database
+- you can use file on internet as site's database (db.json)
+- input double space select first one, ctrl+1~9 0 select 1~9 10 suggestion item.
 - use '!\_clr\_taxo()' clear all void class
 - use '!\_clr\_localStorage()' clear all database and save webpage to local,
  them you can launch it from local, no js or css, just one html.
