@@ -1,6 +1,6 @@
 # Neo-Tab
 
-Neo Tab is a simple web navigation page which can be customized content as you wish
+Neo Tab is a simple web navigation page which can be customized content as you wish, it less than 25kb.
 
 the essential example of configure file
 
@@ -17,17 +17,13 @@ the essential example of configure file
       {"n":"iciba","s":"http://www.iciba.com/word?w=%s","i":"http://cdn.iciba.com/www/img/www/favicon.ico"}
     ]
   },
-  "M":{
-    "hist":[],
-    "seen":"onelook"
-  },
-  "X":{
-    "darkUI":true,
-    "soloUI":false,
-    "sugVendor":"sogou",
-    "limHist":55,
-    "useHist":true
-  }
+  "darkUI":true,
+  "soloUI":false,
+  "limHist":55,
+  "useHist":true
+  "sugVendor":"sogou",
+  "seen":"onelook",
+  "hist":[]
 }
 ```
 
@@ -43,10 +39,6 @@ S searcher
   s search
   m mobile compatible search (optional)
   i favicon (optional)
-
-M memo
-
-X options
 
 ```
 
