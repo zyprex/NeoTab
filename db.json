@@ -113,6 +113,7 @@
     "🧰":[
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
+      {"n":"在线工具_OSCHINA","u":"https://tool.oschina.net/"},
       {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
@@ -135,6 +136,7 @@
       {"n":"后续","u":"https://houxu.app/"},
       {"n":"奇客solidot","u":"https://www.solidot.org/"},
       {"n":"抽屉新热榜","u":"https://dig.chouti.com/"},
+      {"n":"AnyKnew","u":"https://www.anyknew.com/"},
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
     ],
     "😃":[
@@ -165,6 +167,7 @@
       {"n":"dangdang","s":"http://search.dangdang.com/?key=%s","m":"http://search.m.dangdang.com/search.php?keyword=%s"},
       {"n":"dianping","s":"http://www.dianping.com/search/keyword/1/0_%s","m":"https://m.dianping.com/shoplist/3/search?from=m_search&keyword=%s","i":"http://www.dpfile.com/app/pc-common/dp_favicon.a4af753914321c8e82e402e2b4be01d7.ico"},
       {"n":"mogu","s":"https://list.mogu.com/search/goods?q=%s","m":"https://m.mogu.com/wall/s?q=%s","i":"https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png"},
+      {"n":"whatbuytoday","s":"https://www.whatbuytoday.com/s/search?q=%s"},
       {"n":"smzdm","s":"https://search.smzdm.com/?s=%s","m":"https://search.m.smzdm.com/?s=%s"}
     ],
     "🌏":[

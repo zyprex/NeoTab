@@ -2,6 +2,7 @@
 
 Neo Tab is a simple web navigation page which can be customized content as you wish, it less than 25kb.
 
+## Example of Configure File
 the essential example of configure file
 
 ```json
@@ -42,7 +43,7 @@ S searcher
 
 ```
 
-## usage
+## Input Usage
 
 |key[0] | Fn  |
 |:------|:----|
@@ -51,46 +52,52 @@ S searcher
 | ?     | js regex search history         |
 | !     | js regex search function        |
 
-### quick mod
+### Quick Modify Command (prefer edit db.json directly)
 create new search engine, if xxx already exist, it will be update
 
-   .xxx;;GroupName;;http://example.com/?q=%s;;http://cdn.static.example/icon.ico;;http://m.example.com/?q=%s
+```
+.xxx;;GroupName;;http://example.com/?q=%s;;http://cdn.static.example/icon.ico;;http://m.example.com/?q=%s
+```
 
 use the "space" class (viz. represent null or void), to delete(d) or read(r) search engine
 
-   .xxx;; ;;d
-   .xxx;; ;;r
+```
+.xxx;; ;;d
+.xxx;; ;;r
+```
 
 same as links
 
-   /xxx;;class;;http://example.com/
-   /xxx;; ;;d
-   /xxx;; ;;r
+```
+/xxx;;class;;http://example.com/
+/xxx;; ;;d
+/xxx;; ;;r
+```
 
-## options
+## Options
 
 |name     |value  |description|
 |:---     |:---   |:--------- |
-|darkUI   |true   | use light or dark UI, can be toggle use '!\_sw\_darkUI()' |
-|soloUI   |false  | use solo UI, the search engin and links will hidden |
-|sugVendor|sogou  | use web suggestion api from 7 site, use '!\_sw\_sugVendor()' to see possible value |
-|limHist  |55     | how many history should be record |
-|useHist  |true   | whether to record history or not |
-|winOpen  |true   | whether to open new window or not |
+|darkui   |true   | use light or dark ui, can be toggle use '!\_sw\_darkui()' |
+|soloui   |false  | use solo ui, the search engin and links will hidden |
+|limhist  |55     | how many history should be record |
+|usehist  |true   | whether to record history or not |
+|winopen  |true   | whether to open new window or not |
+|sugvendor|sogou  | use web suggestion api from 7 site |
 
- __NOTE__ : db.M.seen memorized last used search engine, you can set it at configure file.
+ __note__ : db.seen memorized last used search engine, you can set it at configure file.
 
-## extra function
+## Extra Function
 
-file transfer service use file.io API
+file transfer service use [file.io](https://www.file.io/) API
 
-qrcode generate use qrjs2 library
+qrcode generate use [qrjs2](https://github.com/englishextra/qrjs2) library
 
-## pro tips
+## Pro Tips
 
 - you can use file on internet as site's database (db.json)
-- input double space select first one, ctrl+1~9 0 select 1~9 10 suggestion item.
+- input double space auto select first one, ctrl+1\~9 0 select 1\~9 10 suggestion item.
 - use '!\_clr\_taxo()' clear all void class
-- use '!\_clr\_localStorage()' clear all database and save webpage to local,
- them you can launch it from local, no js or css, just one html.
+- use '!\_clr\_localStorage()' clear all database and `ctrl+s` save webpage to local,
+ them you can launch it from local.
 
