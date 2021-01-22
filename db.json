@@ -28,8 +28,9 @@
       {"n":"笔点","u":"https://www.bidianer.com/"},
       {"n":"简单导航","u":"https://hao.hrka.net/"},
       {"n":"软核主页","u":"https://so.softkernel.cn/"},
-      {"n":"北邮人导航","u":"http://byr.wiki/new/"},
+      {"n":"北邮人导航","u":"http://byr.wiki/"},
       {"n":"效率集","u":"http://www.xiaolvji.com/"},
+      {"n":"青柠起始页","u":"https://a.maorx.cn/"},
       {"n":"蜗牛导航","u":"https://s.eallion.com/"},
       {"n":"站搜搜","u":"https://www.zhansousou.com/"},
       {"n":"集知盒子","u":"https://www.jizhihezi.com/"},
@@ -90,6 +91,7 @@
       {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
       {"n":"PlayOnLinux","u":"https://www.playonlinux.com/en/"},
       {"n":"软件SOS","u":"https://www.rjsos.com/"},
+      {"n":"易查","u":"https://so.acurd.com/"},
       {"n":"精品网站导航","u":"https://imyshare.com/"},
       {"n":"分享者","u":"http://www.sharerw.com/"},
       {"n":"干货集中营","u":"https://gank.io/"},
@@ -106,6 +108,7 @@
       {"n":"下厨房","u":"https://www.xiachufang.com/"},
       {"n":"默沙东诊疗手册","u":"https://www.msdmanuals.com/zh"},
       {"n":"中国数字科技馆","u":"https://www.cdstm.cn/"},
+      {"n":"中国政府网","u":"http://www.gov.cn/"},
       {"n":"Yahoo Answers","u":"https://answers.yahoo.com/"},
       {"n":"Answers","u":"https://www.answers.com/"},
       {"n":"Stack Exchange","u":"https://stackexchange.com/"}
@@ -121,6 +124,7 @@
     ],
     "📘":[
       {"n":"Library Genesis","u":"http://libgen.rs/"},
+      {"n":"熊猫搜书","u":"https://ebook.huzerui.com/"},
       {"n":"好讀","u":"http://www.haodoo.net/?M=hd&P=welcome"},
       {"n":"书格","u":"https://new.shuge.org/"},
       {"n":"天赋好书","u":"https://www.cntofu.com/"},
@@ -136,6 +140,7 @@
       {"n":"后续","u":"https://houxu.app/"},
       {"n":"奇客solidot","u":"https://www.solidot.org/"},
       {"n":"抽屉新热榜","u":"https://dig.chouti.com/"},
+      {"n":"Tophub","u":"https://tophub.today/"},
       {"n":"AnyKnew","u":"https://www.anyknew.com/"},
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
     ],
@@ -167,7 +172,7 @@
       {"n":"dangdang","s":"http://search.dangdang.com/?key=%s","m":"http://search.m.dangdang.com/search.php?keyword=%s"},
       {"n":"dianping","s":"http://www.dianping.com/search/keyword/1/0_%s","m":"https://m.dianping.com/shoplist/3/search?from=m_search&keyword=%s","i":"http://www.dpfile.com/app/pc-common/dp_favicon.a4af753914321c8e82e402e2b4be01d7.ico"},
       {"n":"mogu","s":"https://list.mogu.com/search/goods?q=%s","m":"https://m.mogu.com/wall/s?q=%s","i":"https://s10.mogucdn.com/mlcdn/c45406/170401_16fj5k6k4174bfd21d03a4gf6a7hg_48x48.png"},
-      {"n":"whatbuytoday","s":"https://www.whatbuytoday.com/s/search?q=%s"},
+      {"n":"whatbuytoday","s":"https://www.whatbuytoday.com/s/search?q=%s","i":"https://www.whatbuytoday.com/media/img/logo/favicon.ico"},
       {"n":"smzdm","s":"https://search.smzdm.com/?s=%s","m":"https://search.m.smzdm.com/?s=%s"}
     ],
     "🌏":[
