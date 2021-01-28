@@ -152,18 +152,18 @@
   "S":{
     "🔍":[
       {"n":"google","s":"https://www.google.com/search?q=%s"},
-      {"n":"sogou weixin","s":"http://www.sogou.com/web?query=%s"},
+      {"n":"sogou","s":"https://www.sogou.com/web?query=%s"},
       {"n":"doge","s":"https://www.dogedoge.com/results?q=%s","i":"https://www.dogedoge.com/assets/doge_ico.png"},
       {"n":"bing","s":"https://cn.bing.com/search?q=%s"},
       {"n":"360","s":"https://www.so.com/s?q=%s"},
-      {"n":"baidu tieba zhidao","s":"https://www.baidu.com/s?wd=%s"},
+      {"n":"baidu","s":"https://www.baidu.com/s?wd=%s"},
       {"n":"ecosia","s":"https://www.ecosia.org/search?q=%s","i":"https://cdn.ecosia.org/assets/images/ico/favicon.ico"},
       {"n":"yandex","s":"https://yandex.com/search/?text=%s"},
       {"n":"lookao","s":"https://lookao.com/search?q=%s"},
       {"n":"mengso","s":"https://mengso.com/search?q=%s"},
       {"n":"gigablast","s":"https://www.gigablast.com/search?&q=%s"},
       {"n":"goobe","s":"https://goobe.io/search.aspx?k=%s"},
-      {"n":"miji","s":"https://mijisou.com/search?q=%s","i":"https://mijisou.com/themes/entropage/img/favicon.png?staticVersion=1557735741"}
+      {"n":"oscobo","s":"https://www.oscobo.com/search.php?q=%s"}
     ],
     "🛒":[
       {"n":"amazon","s":"https://www.amazon.com/s?k=%s"},
@@ -233,6 +233,6 @@
   "useHist":true,
   "winOpen":true,
   "sugVendor":"sogou",
-  "seen":"sogou weixin",
+  "seen":"sogou",
   "hist":[]
 }
