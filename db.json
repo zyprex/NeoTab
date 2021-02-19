@@ -5,7 +5,6 @@
       {"n":"书签地球","u":"https://www.bookmarkearth.com/"},
       {"n":"KIM","u":"https://kim.plopco.com/"},
       {"n":"Linggle 10^12","u":"https://linggle.com/"},
-      {"n":"Magi","u":"https://magi.com/"},
       {"n":"RefSeek","u":"https://www.refseek.com/"},
       {"n":"LMGTFY","u":"https://lmgtfy.app/"},
       {"n":"iSearchX","u":"https://isearchx.com/"}
@@ -83,6 +82,7 @@
       {"n":"wallroom","u":"https://wallroom.io/"},
       {"n":"WallpapersWide.com","u":"http://wallpaperswide.com/"},
       {"n":"WallpapersCraft","u":"https://wallpaperscraft.com/"},
+      {"n":"HiClipart","u":"https://www.hiclipart.com/"},
       {"n":"Simple Icons","u":"http://simpleicons.p2hp.com/"}
     ],
     "🍬":[
@@ -115,11 +115,14 @@
     ],
     "🧰":[
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
+      {"n":"RegExr","u":"https://regexr.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
       {"n":"在线工具_OSCHINA","u":"https://tool.oschina.net/"},
       {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
+      {"n":"tanpok_图片压缩","u":"https://tool.tanpok.com/"},
+      {"n":"Join Screenshots","u":"https://join-screenshots.zhanghai.me/"},
       {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
     ],
     "📘":[
@@ -134,6 +137,7 @@
     "📰":[
       {"n":"SegmentFault","u":"https://segmentfault.com/"},
       {"n":"V2EX","u":"https://www.v2ex.com/"},
+      {"n":"LearnKu","u":"https://learnku.com/"},
       {"n":"fly63前端网","u":"http://www.fly63.com/"},
       {"n":"USA TODAY","u":"https://www.usatoday.com/"},
       {"n":"wired","u":"https://www.wired.com/"},
@@ -163,6 +167,8 @@
       {"n":"mengso","s":"https://mengso.com/search?q=%s"},
       {"n":"gigablast","s":"https://www.gigablast.com/search?&q=%s"},
       {"n":"goobe","s":"https://goobe.io/search.aspx?k=%s"},
+      {"n":"quark","s":"https://quark.sm.cn/s?q=%s"},
+      {"n":"magi","s":"https://magi.com/search?q=%s"},
       {"n":"oscobo","s":"https://www.oscobo.com/search.php?q=%s"}
     ],
     "🛒":[
@@ -224,6 +230,7 @@
       {"n":"huaban","s":"https://huaban.com/search/?q=%s"}
     ],
     "♾️":[
+      {"n":"Approach0","s":"https://approach0.xyz/search/?q=%s"},
       {"n":"wolframAlpha","s":"https://www.wolframalpha.com/input/?i=%s"}
     ]
   },
