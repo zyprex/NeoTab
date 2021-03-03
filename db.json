@@ -15,7 +15,7 @@
       {"n":"虫部落快搜","u":"https://search.chongbuluo.com/"},
       {"n":"不思议导航","u":"https://orxing.top/nav/"},
       {"n":"爱达杂货铺","u":"https://adzhp.cn/"},
-      {"n":"果壳任意门","u":"http://www.gkbang.cn/link/"},
+      {"n":"果壳任意门","u":"http://gate.guohere.com/"},
       {"n":"果汁导航","u":"http://guozhivip.com/"},
       {"n":"黑点导航","u":"http://www.ihddh.com/"},
       {"n":"简法主页","u":"https://www.jianfast.com/"},
@@ -46,7 +46,7 @@
     ],
     "🧱":[
       {"n":"国家哲学社会科学文献中心","u":"http://www.ncpssd.org/"},
-      {"n":"iData-知识检索","u":"https://www.cn-ki.net/"},
+      {"n":"科塔学术导航","u":"https://site.sciping.com/"},
       {"n":"Encyclopedia of Life","u":"https://eol.org/"},
       {"n":"鱼塘热榜","u":"https://mo.fish/"},
       {"n":"最美网站","u":"https://zuimeix.com/"},
@@ -116,10 +116,12 @@
     "🧰":[
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"RegExr","u":"https://regexr.com/"},
+      {"n":"Linux命令大全(手册)","u":"https://www.linuxcool.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
       {"n":"在线工具_OSCHINA","u":"https://tool.oschina.net/"},
       {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
+      {"n":"灵匣_黄历","u":"https://www.lnka.cn/huangli.aspx"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
       {"n":"tanpok_图片压缩","u":"https://tool.tanpok.com/"},
       {"n":"Join Screenshots","u":"https://join-screenshots.zhanghai.me/"},
@@ -146,6 +148,7 @@
       {"n":"抽屉新热榜","u":"https://dig.chouti.com/"},
       {"n":"Tophub","u":"https://tophub.today/"},
       {"n":"AnyKnew","u":"https://www.anyknew.com/"},
+      {"n":"少数派","u":"https://sspai.com/"},
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
     ],
     "😃":[
@@ -211,7 +214,6 @@
     "👪":[
       {"n":"zhihu","s":"https://www.zhihu.com/search?q=%s"},
       {"n":"douban","s":"https://www.douban.com/search?q=%s","m":"https://m.douban.com/search/?query=%s"},
-      {"n":"sspai","s":"https://sspai.com/search/post/%s","i":"https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico"},
       {"n":"guokr","s":"https://www.guokr.com/search/all/?wd=%s","m":"https://m.guokr.com/scientific/search?word=%s"},
       {"n":"jianshu","s":"https://www.jianshu.com/search?q=%s"}
     ],
