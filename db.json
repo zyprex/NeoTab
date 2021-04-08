@@ -43,6 +43,8 @@
       {"n":"MyWeb100","u":"https://myweb100.com/"},
       {"n":"炫猿","u":"https://xydh.fun/"},
       {"n":"一个开始","u":"https://aur.one/"},
+      {"n":"不求人导航","u":"https://www.bqrdh.com/"},
+      {"n":"搜图导航","u":"https://www.91sotu.com/"},
       {"n":"Fulck","u":"https://fulck.com/"}
     ],
     "🧱":[
@@ -62,6 +64,7 @@
       {"n":"W3Cschool极客导航","u":"https://123.w3cschool.cn/"}
     ],
     "🎞️":[
+      {"n":"MidiShow","u":"https://www.midishow.com/"},
       {"n":"字幕库","u":"http://zmk.tw"},
       {"n":"茶杯狐","u":"https://www.cupfox.com/"},
       {"n":"电影推荐-太空船博客","u":"https://www.boatsky.com/movie/list"},
@@ -105,13 +108,16 @@
       {"n":"考试酷","u":"https://www.examcoo.com/index/ku"},
       {"n":"全历史","u":"https://www.allhistory.com/"},
       {"n":"译学馆","u":"https://www.yxgapp.com/"},
+      {"n":"iPlant 植物智","u":"http://www.iplant.cn/"},
       {"n":"丁香园","u":"https://portal.dxy.cn/"},
       {"n":"医学微视","u":"https://www.mvyxws.com/"},
+      {"n":"戊戌数据","u":"https://www.wuxuwang.com/"},
       {"n":"下厨房","u":"https://www.xiachufang.com/"},
       {"n":"默沙东诊疗手册","u":"https://www.msdmanuals.com/zh"},
       {"n":"中国数字科技馆","u":"https://www.cdstm.cn/"},
       {"n":"中国政府网","u":"http://www.gov.cn/"},
       {"n":"国家互联网应急中心","u":"https://www.cert.org.cn/"},
+      {"n":"CNNIC","u":"http://www.cnnic.net.cn/"},
       {"n":"Yahoo Answers","u":"https://answers.yahoo.com/"},
       {"n":"Answers","u":"https://www.answers.com/"},
       {"n":"Stack Exchange","u":"https://stackexchange.com/"}
@@ -120,9 +126,11 @@
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"RegExr","u":"https://regexr.com/"},
       {"n":"Linux命令大全(手册)","u":"https://www.linuxcool.com/"},
+      {"n":"Animated Knots by Grog","u":"https://www.animatedknots.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
       {"n":"在线工具_OSCHINA","u":"https://tool.oschina.net/"},
       {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
+      {"n":"SOCODE.PRO","u":"https://socode.pro/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
       {"n":"灵匣_黄历","u":"https://www.lnka.cn/huangli.aspx"},
       {"n":"asciiflow","u":"http://asciiflow.com/"},
@@ -132,10 +140,14 @@
     ],
     "📘":[
       {"n":"Library Genesis","u":"http://libgen.rs/"},
+      {"n":"Electronic Library","u":"https://en.booksee.org/"},
+      {"n":"Libgen","u":"https://libgen.me/"},
+      {"n":"LoreFree","u":"https://ebook2.lorefree.com/"},
       {"n":"熊猫搜书","u":"https://ebook.huzerui.com/"},
       {"n":"书享家","u":"http://shuxiangjia.cn/"},
       {"n":"好讀","u":"http://www.haodoo.net/?M=hd&P=welcome"},
       {"n":"书格","u":"https://new.shuge.org/"},
+      {"n":"数字报刊","u":"http://www.53bk.com/"},
       {"n":"天赋好书","u":"https://www.cntofu.com/"},
       {"n":"中国哲学书电子化计划","u":"https://ctext.org/zhs"},
       {"n":"全国图书馆参考咨询联盟","u":"http://www.ucdrs.superlib.net/"}
@@ -153,7 +165,12 @@
       {"n":"Tophub","u":"https://tophub.today/"},
       {"n":"AnyKnew","u":"https://www.anyknew.com/"},
       {"n":"少数派","u":"https://sspai.com/"},
+      {"n":"极客阅读","u":"https://jikeyuedu.cn/hot"},
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
+    ],
+    "🎮":[
+      {"n":"Tetris","u":"https://chvin.github.io/react-tetris/"},
+      {"n":"Maze Generator","u":"http://www.mazegenerator.net/"}
     ],
     "😃":[
       {"n":"xkcd","u":"https://xkcd.com/"},
