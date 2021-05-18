@@ -118,7 +118,6 @@
       {"n":"中国政府网","u":"http://www.gov.cn/"},
       {"n":"国家互联网应急中心","u":"https://www.cert.org.cn/"},
       {"n":"CNNIC","u":"http://www.cnnic.net.cn/"},
-      {"n":"Yahoo Answers","u":"https://answers.yahoo.com/"},
       {"n":"Answers","u":"https://www.answers.com/"},
       {"n":"Stack Exchange","u":"https://stackexchange.com/"}
     ],
@@ -137,6 +136,7 @@
       {"n":"asciiflow","u":"http://asciiflow.com/"},
       {"n":"tanpok_图片压缩","u":"https://tool.tanpok.com/"},
       {"n":"Join Screenshots","u":"https://join-screenshots.zhanghai.me/"},
+      {"n":"win10 gadgets","u":"https://windows10gadgets.pro/"},
       {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
     ],
     "📘":[
@@ -172,6 +172,8 @@
       {"n":"喷嚏网","u":"http://www.dapenti.com/blog/index.asp"}
     ],
     "🎮":[
+      {"n":"CoolROM","u":"https://coolrom.com.au/"},
+      {"n":"OldmanEmu","u":"https://www.oldmanemu.net/"},
       {"n":"Tetris","u":"https://chvin.github.io/react-tetris/"},
       {"n":"Maze Generator","u":"http://www.mazegenerator.net/"}
     ],
@@ -233,6 +235,7 @@
       {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s","m":"https://m.tv.sohu.com/upload/h5/m/mso.html?key=%s"},
       {"n":"v.qq","s":"https://v.qq.com/x/search/?q=%s"},
       {"n":"AcFun","s":"https://www.acfun.cn/search/?keyword=%s"},
+      {"n":"Bangumi","s":"http://bgm.tv/subject_search/%s","i":"http://bgm.tv/img/favicon.ico"},
       {"n":"bilibili","s":"https://search.bilibili.com/all?keyword=%s"}
     ],
     "👪":[
