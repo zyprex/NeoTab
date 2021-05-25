@@ -145,6 +145,8 @@
       {"n":"Libgen","u":"https://libgen.me/"},
       {"n":"LoreFree","u":"https://ebook2.lorefree.com/"},
       {"n":"熊猫搜书","u":"https://ebook.huzerui.com/"},
+      {"n":"书伴","u":"https://bookfere.com/"},
+      {"n":"沉金书屋","u":"https://chenjin5.com/"},
       {"n":"书享家","u":"http://shuxiangjia.cn/"},
       {"n":"好讀","u":"http://www.haodoo.net/?M=hd&P=welcome"},
       {"n":"书格","u":"https://new.shuge.org/"},
@@ -174,6 +176,7 @@
     "🎮":[
       {"n":"CoolROM","u":"https://coolrom.com.au/"},
       {"n":"OldmanEmu","u":"https://www.oldmanemu.net/"},
+      {"n":"CrazyGames","u":"https://www.crazygames.com/"},
       {"n":"Tetris","u":"https://chvin.github.io/react-tetris/"},
       {"n":"Maze Generator","u":"http://www.mazegenerator.net/"}
     ],
@@ -190,6 +193,7 @@
       {"n":"bing","s":"https://cn.bing.com/search?q=%s"},
       {"n":"360","s":"https://www.so.com/s?q=%s"},
       {"n":"baidu","s":"https://www.baidu.com/s?wd=%s"},
+      {"n":"impress","s":"https://impress.pw/search?q=%s"},
       {"n":"ecosia","s":"https://www.ecosia.org/search?q=%s","i":"https://cdn.ecosia.org/assets/images/ico/favicon.ico"},
       {"n":"yandex","s":"https://yandex.com/search/?text=%s"},
       {"n":"lookao","s":"https://lookao.com/search?q=%s"},
@@ -255,8 +259,16 @@
       {"n":"jikipedia","s":"https://jikipedia.com/search?phrase=%s"},
       {"n":"moeWiki","s":"https://zh.moegirl.org.cn/%s"}
     ],
+    "🔧": [
+      {"n":"appinn","s":"https://www.appinn.com/?s=%s"},
+      {"n":"iplaysoft","s":"https://www.iplaysoft.com/?s=%s"}
+    ],
     "📷":[
       {"n":"huaban","s":"https://huaban.com/search/?q=%s"}
+    ],
+    "🎵":[
+      {"n":"music163","s":"https://music.163.com/#/search/m/?s=%s","i":"https://s1.music.126.net/style/favicon.ico"},
+      {"n":"y.qq","s":"https://y.qq.com/portal/search.html#page=1&w=%s"}
     ],
     "♾️":[
       {"n":"Approach0","s":"https://approach0.xyz/search/?q=%s"},
