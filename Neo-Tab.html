@@ -484,7 +484,7 @@ function o() {
   }
   let k = kw.value;
   if (k!=""&&kw.getAttribute("data-s")) {
-    let u = kw.getAttribute("data-s").replace("%s",k);
+    let u = kw.getAttribute("data-s").replace("%s", encodeURIComponent(k));
     if (db.winOpen) {
       window.open(u);
     } else {
