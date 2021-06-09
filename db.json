@@ -70,6 +70,7 @@
       {"n":"系统极客","u":"http://www.sysgeek.cn/"},
       {"n":"How-To Geek","u":"https://www.howtogeek.com/"},
       {"n":"HowStuffWorks","u":"https://www.howstuffworks.com/"},
+      {"n":"It's FOSS","u":"https://itsfoss.com/"},
       {"n":"Linux Handbook","u":"https://linuxhandbook.com/"}
     ],
     "🎨":[
@@ -176,6 +177,7 @@
       {"n":"TypeLit.io","u":"https://www.typelit.io/"},
       {"n":"CoolROM","u":"https://coolrom.com.au/"},
       {"n":"OldmanEmu","u":"https://www.oldmanemu.net/"},
+      {"n":"itch.io","u":"https://itch.io/"},
       {"n":"CrazyGames","u":"https://www.crazygames.com/"},
       {"n":"Tetris","u":"https://chvin.github.io/react-tetris/"},
       {"n":"Maze Generator","u":"http://www.mazegenerator.net/"}
