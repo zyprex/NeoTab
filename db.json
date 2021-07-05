@@ -91,7 +91,9 @@
       {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
       {"n":"PlayOnLinux","u":"https://www.playonlinux.com/en/"},
       {"n":"IzzyOnDroid","u":"https://apt.izzysoft.de/fdroid/"},
+      {"n":"APK-S","u":"https://apk-s.io/"},
       {"n":"w3cschool","u":"https://www.w3cschool.cn/"},
+      {"n":"oldversion","u":"http://www.oldversion.com/"},
       {"n":"软件SOS","u":"https://www.rjsos.com/"},
       {"n":"易查","u":"https://so.acurd.com/"},
       {"n":"精品网站导航","u":"https://imyshare.com/"},
@@ -122,6 +124,7 @@
       {"n":"Vim Regular Expressions 101","u":"http://vimregex.com/"},
       {"n":"MathLive","u":"https://mathlive.io/"},
       {"n":"RegExr","u":"https://regexr.com/"},
+      {"n":"dict.org","u":"http://dict.org/"},
       {"n":"Linux命令大全(手册)","u":"https://www.linuxcool.com/"},
       {"n":"Animated Knots by Grog","u":"https://www.animatedknots.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
@@ -135,6 +138,7 @@
       {"n":"Join Screenshots","u":"https://join-screenshots.zhanghai.me/"},
       {"n":"win10 gadgets","u":"https://windows10gadgets.pro/"},
       {"n":"Wormhole","u":"https://wormhole.app/"},
+      {"n":"ttm.sh","u":"https://ttm.sh/"},
       {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
     ],
     "📘":[
