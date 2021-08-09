@@ -68,6 +68,7 @@
     ],
     "🖥️":[
       {"n":"系统极客","u":"http://www.sysgeek.cn/"},
+      {"n":"The Living Internet","u":"https://livinginternet.com/"},
       {"n":"How-To Geek","u":"https://www.howtogeek.com/"},
       {"n":"HowStuffWorks","u":"https://www.howstuffworks.com/"},
       {"n":"It's FOSS","u":"https://itsfoss.com/"},
@@ -88,6 +89,7 @@
     "🍬":[
       {"n":"Office教程网","u":"https://www.office26.com/"},
       {"n":"Slant","u":"https://www.slant.co/"},
+      {"n":"AlternativeTo","u":"https://alternativeto.net/"},
       {"n":"Crx4Chrome","u":"https://www.crx4chrome.com/"},
       {"n":"PlayOnLinux","u":"https://www.playonlinux.com/en/"},
       {"n":"IzzyOnDroid","u":"https://apt.izzysoft.de/fdroid/"},
@@ -196,6 +198,7 @@
       {"n":"google","s":"https://www.google.com/search?q=%s"},
       {"n":"duckduckgo","s":"https://duckduckgo.com/?q=%s"},
       {"n":"sogou","s":"https://www.sogou.com/web?query=%s"},
+      {"n":"sm","s":"https://m.sm.cn/s?from=smor&tomode=center&q=%s"},
       {"n":"doge","s":"https://www.dogedoge.com/results?q=%s","i":"https://www.dogedoge.com/assets/doge_ico.png"},
       {"n":"bing","s":"https://cn.bing.com/search?q=%s"},
       {"n":"360","s":"https://www.so.com/s?q=%s"},
@@ -213,6 +216,7 @@
     ],
     "🛒":[
       {"n":"amazon","s":"https://www.amazon.com/s?k=%s"},
+      {"n":"ebay","s":"https://www.ebay.com/sch/i.html?_nkw=%s", "i":"https://pages.ebay.com/favicon.ico"},
       {"n":"JD","s":"https://search.jd.com/Search?keyword=%s","m":"https://so.m.jd.com/ware/search.action?keyword=%s"},
       {"n":"tmall","s":"https://list.tmall.com/search_product.htm?q=%s"},
       {"n":"dangdang","s":"http://search.dangdang.com/?key=%s","m":"http://search.m.dangdang.com/search.php?keyword=%s"},
@@ -232,6 +236,8 @@
     ],
     "⌨️":[
       {"n":"github","s":"https://github.com/search?utf8=&q=%s"},
+      {"n":"sourceforge","s":"https://sourceforge.net/directory/?q=%s"},
+      {"n":"gitee","s":"https://search.gitee.com/?q=%s"},
       {"n":"runoob","s":"https://www.runoob.com/?s=%s","i":"https://static.runoob.com/images/favicon.ico"},
       {"n":"MDN","s":"https://developer.mozilla.org/en-US/search?q=%s"},
       {"n":"CodePen","s":"https://codepen.io/search/pens?q=%s"},
@@ -243,6 +249,7 @@
     "🎞":[
       {"n":"YouTube","s":"https://www.youtube.com/results?search_query=%s"},
       {"n":"Vimeo","s":"https://vimeo.com/search?q=%s"},
+      {"n":"cctv","s":"https://search.cctv.com/search.php?qtext=%s","m":"https://search.cctv.com/m/search.php?type=video&qtext=%s"},
       {"n":"youku","s":"https://so.youku.com/search_video/q_%s","m":"https://search.youku.com/search_video?keyword=%s"},
       {"n":"iqiyi","s":"https://so.iqiyi.com/so/q_%s","i":"https://www.iqiyi.com/favicon.ico"},
       {"n":"tv.sohu","s":"http://so.tv.sohu.com/mts?wd=%s","m":"https://m.tv.sohu.com/upload/h5/m/mso.html?key=%s"},
