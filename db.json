@@ -82,6 +82,7 @@
       {"n":"Awwwards","u":"http://www.awwwards.com/"},
       {"n":"Emoji Cheat Sheet","u":"https://emojicheatsheet.com/"},
       {"n":"wallroom","u":"https://wallroom.io/"},
+      {"n":"Wallpapers13","u":"https://www.wallpapers13.com/"},
       {"n":"WallpapersWide.com","u":"http://wallpaperswide.com/"},
       {"n":"WallpapersCraft","u":"https://wallpaperscraft.com/"},
       {"n":"Simple Icons","u":"http://simpleicons.p2hp.com/"}
@@ -104,6 +105,10 @@
       {"n":"不死鸟","u":"https://iao.su/"}
     ],
     "📚":[
+      {"n":"生存狂网","u":"https://www.psker.com/"},
+      {"n":"Git Magic","u":"http://www-cs-students.stanford.edu/~blynn/gitmagic/"},
+      {"n":"Beej's Guides","u":"http://beej.us/guide/"},
+      {"n":"USEUM","u":"https://useum.org/"},
       {"n":"WHO","u":"https://www.who.int/zh"},
       {"n":"穷游网","u":"http://search.qyer.com/"},
       {"n":"考试酷","u":"https://www.examcoo.com/index/ku"},
@@ -131,6 +136,7 @@
       {"n":"Animated Knots by Grog","u":"https://www.animatedknots.com/"},
       {"n":"在线工具","u":"https://www.atool99.com/"},
       {"n":"在线工具_OSCHINA","u":"https://tool.oschina.net/"},
+      {"n":"孟坤工具箱","u":"http://tool.mkblog.cn/"},
       {"n":"CODELF","u":"https://unbug.github.io/codelf/"},
       {"n":"SOCODE.PRO","u":"https://socode.pro/"},
       {"n":"和风天气","u":"https://www.qweather.com/"},
@@ -141,6 +147,7 @@
       {"n":"win10 gadgets","u":"https://windows10gadgets.pro/"},
       {"n":"Wormhole","u":"https://wormhole.app/"},
       {"n":"ttm.sh","u":"https://ttm.sh/"},
+      {"n":"pb","u":"https://fars.ee/"},
       {"n":"Simple.Savr","u":"https://www.ssavr.com/"}
     ],
     "📘":[
@@ -162,6 +169,9 @@
       {"n":"全国图书馆参考咨询联盟","u":"http://www.ucdrs.superlib.net/"}
     ],
     "📰":[
+      {"n":"Bear Blog","u":"https://bearblog.dev/"},
+      {"n":"sourcehut","u":"https://sr.ht/"},
+      {"n":"grep.app","u":"https://grep.app/"},
       {"n":"SegmentFault","u":"https://segmentfault.com/"},
       {"n":"V2EX","u":"https://www.v2ex.com/"},
       {"n":"LearnKu","u":"https://learnku.com/"},
