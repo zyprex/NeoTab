@@ -68,6 +68,12 @@
       {"n":"Movie Quotes","u":"http://www.subzin.com/"}
     ],
     "🖥️":[
+      {"n":"sourcehut","u":"https://sr.ht/"},
+      {"n":"cppreference","u":"https://en.cppreference.com/w/"},
+      {"n":"searchcode","u":"https://searchcode.com/"},
+      {"n":"devhints","u":"https://devhints.io/"},
+      {"n":"grep.app","u":"https://grep.app/"},
+      {"n":"greasyfork","u":"https://greasyfork.org/en/scripts"},
       {"n":"系统极客","u":"http://www.sysgeek.cn/"},
       {"n":"The Living Internet","u":"https://livinginternet.com/"},
       {"n":"How-To Geek","u":"https://www.howtogeek.com/"},
@@ -172,9 +178,6 @@
     ],
     "📰":[
       {"n":"Bear Blog","u":"https://bearblog.dev/"},
-      {"n":"sourcehut","u":"https://sr.ht/"},
-      {"n":"searchcode","u":"https://searchcode.com/"},
-      {"n":"grep.app","u":"https://grep.app/"},
       {"n":"SegmentFault","u":"https://segmentfault.com/"},
       {"n":"V2EX","u":"https://www.v2ex.com/"},
       {"n":"LearnKu","u":"https://learnku.com/"},
@@ -226,6 +229,12 @@
       {"n":"goobe","s":"https://goobe.io/search.aspx?k=%s"},
       {"n":"quark","s":"https://quark.sm.cn/s?q=%s"},
       {"n":"magi","s":"https://magi.com/search?q=%s"},
+      {"n":"searx","s":"https://searx.thegpm.org/?q=%s"},
+      {"n":"mojeek","s":"https://www.mojeek.com/search?q=%s"},
+      {"n":"qwant","s":"https://www.qwant.com/?q=%s"},
+      {"n":"metager","s":"https://metager.de/meta/meta.ger3?eingabe=%s"},
+      {"n":"swisscows","s":"https://swisscows.com/web?query=%s"},
+      {"n":"lilo","s":"https://search.lilo.org/?q=%s"},
       {"n":"oscobo","s":"https://www.oscobo.com/search.php?q=%s"}
     ],
     "🛒":[
@@ -287,6 +296,7 @@
     "❔":[
       {"n":"wikipedia","s":"https://en.wikipedia.org/wiki/%s"},
       {"n":"FANDOM","s":"https://www.fandom.com/?s=%s"},
+      {"n":"knowledgepicker","s":"https://knowledgepicker.com/search?q=%s"},
       {"n":"MBA","s":"http://wiki.mbalib.com/wiki/Special:Search?search=%s"},
       {"n":"wikihow","s":"http://zh.wikihow.com/wikiHowTo?search=%s"},
       {"n":"jikipedia","s":"https://jikipedia.com/search?phrase=%s"},
