@@ -105,8 +105,10 @@
       {"n":"PlayOnLinux","u":"https://www.playonlinux.com/en/"},
       {"n":"IzzyOnDroid","u":"https://apt.izzysoft.de/fdroid/"},
       {"n":"APK-S","u":"https://apk-s.io/"},
+      {"n":"FilePlanet","u":"https://www.fileplanet.com/"},
       {"n":"w3cschool","u":"https://www.w3cschool.cn/"},
       {"n":"oldversion","u":"http://www.oldversion.com/"},
+      {"n":"Go2Think","u":"https://go2think.com/"},
       {"n":"软件SOS","u":"https://www.rjsos.com/"},
       {"n":"易查","u":"https://so.acurd.com/"},
       {"n":"精品网站导航","u":"https://imyshare.com/"},
@@ -207,6 +209,7 @@
       {"n":"CoolROM","u":"https://coolrom.com.au/"},
       {"n":"OldmanEmu","u":"https://www.oldmanemu.net/"},
       {"n":"itch.io","u":"https://itch.io/"},
+      {"n":"byrut","u":"https://byrut.org/"},
       {"n":"CrazyGames","u":"https://www.crazygames.com/"},
       {"n":"Tetris","u":"https://chvin.github.io/react-tetris/"},
       {"n":"Maze Generator","u":"http://www.mazegenerator.net/"}
