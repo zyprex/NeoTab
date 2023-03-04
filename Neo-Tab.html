@@ -96,7 +96,7 @@ center>svg:hover{border:2px solid var(--a-bg);}
 <script>
 'use strict';
 let db,gK0,gK1,gJustGo=true,gPp="",
-gRDb="https://neotab.vercel.app/db.json",
+gRDb="db.json",
 gFn = [
   "_sw_darkUI()",
   "_sw_soloUI()",
@@ -124,11 +124,13 @@ gDye={
     "--c-Y":"#ffeb3b","--c-R":"#a00000"
   }
 },
+
+/* "sogou":"https://www.sogou.com/suggnew/ajajjson?type=web&key=#", */
 gSugAPI={
   "360":"https://sug.so.360.cn/suggest?encodein=utf-8&encodeout=utf-8&format=json&word=#&callback=window.so.sug",
   "baidu":"https://suggestion.baidu.com/su?wd=#&cb=window.baidu.sug",
   "bing":"https://api.bing.com/qsonhs.aspx?type=cb&q=#&cb=window.bing.sug",
-  "sogou":"https://www.sogou.com/suggnew/ajajjson?type=web&key=#",
+  "sogou":"https://sor.html5.qq.com/api/getsug?key=#",
   "taobao":"https://suggest.taobao.com/sug?code=utf-8&q=#&callback=window.taobao.sug",
   "sm":"https://sugs.m.sm.cn/web?t=w&q=#&callback=window.sm.sug",
   "quword":"https://www.quword.com/ciyuan/suggestion.php?callback=window.quword.sug&q=#&dict=dict&s=dict"
@@ -136,7 +138,7 @@ gSugAPI={
 function init_db() {
   db = localStorage.getItem("db");
   if (db===null || db.S===null) {
-    alert("db not found");
+    /* alert("db not found"); */
     db = {"L":{},"S":{}};
   } else {
     db = JSON.parse(db);
@@ -708,7 +710,7 @@ fu.onchange = function(){
 };
 t_qrc.onclick = function (){
   let k = kw.value.trim();
-  let url = k!="" ? k :"https://neotab.vercel.app/";
+  let url = k!="" ? k : window.location.href;
   if (!document.getElementById("lib_qrjs2")) {
     let s = addElem("script",null,"id=lib_qrjs2");
     s.src = "https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.7/js/qrjs2.min.js";
@@ -804,7 +806,7 @@ d_r.onclick = function (){
   let v = prompt("input url:", gRDb);
   gRDb = v;
   if (v=="")
-    gRDb = "https://neotab.vercel.app/db.json";
+    gRDb = "db.json";
   fetch(gRDb)
   .then(function(res){return res.json();})
   .then(function(j){db=j;w_db();location.reload();})
